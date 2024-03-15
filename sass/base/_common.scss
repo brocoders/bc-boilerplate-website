@@ -1,0 +1,90 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  // outline: 1px solid tomato;
+}
+
+body {
+  // color: $primaryTextColor;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+}
+// address {
+//   font-style: normal;
+// }
+// header {
+//   border-bottom: 1px solid #ececec;
+// }
+link {
+  text-decoration: none;
+}
+.container {
+  padding-left: $mobilePadding;
+  padding-right: $mobilePadding;
+  // padding-top: 60px;
+  // padding-bottom: 60px;
+  // margin-left: auto;
+  // margin-right: auto;
+
+  // @media screen and (min-width: 480px) {
+  //   width: 480px;
+  // }
+
+  // @media screen and (min-width: 768px) {
+  //   width: 768px;
+  // }
+
+  @media screen and (min-width: 1200px) {
+    padding-left: $sidePadding;
+    padding-right: $sidePadding;
+    // width: 1200px;
+    // padding-top: 94px;
+    // padding-bottom: 94px;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  @media screen and (min-width: 1200px) {
+    height: 800px;
+    background-image: url(../../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.hero-title {
+  color: #fff;
+}
+.hero-text {
+  color: $lightTextColor;
+}
+.hero-btn {
+  background-color: $mainEmphasisColor;
+  color: #fff;
+  padding: 15px 40px;
+  @extend %button;
+}

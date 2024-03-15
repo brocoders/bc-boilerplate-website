@@ -1,0 +1,271 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BCBoilerplate</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <header class="container header-container">
+      <a href="./index.html" class="logo logo--header">
+        <svg width="26" height="36" aria-label="site logo">
+          <use href="./images/sprite.svg#BroLogo"></use>
+        </svg>
+        BC Boilerplates
+      </a>
+      <button
+        type="button"
+        class="menu__btn"
+        aria-expanded="false"
+        aria-controls="menu-container"
+        data-menu-button
+      >
+        <svg width="24" height="16" aria-label="Mobile menu switcher">
+          <use
+            class="menu__close-icon"
+            href="./images/sprite.svg#close_nav"
+          ></use>
+          <use
+            class="menu__open-icon"
+            href="./images/sprite.svg#menu_nav"
+          ></use>
+        </svg>
+      </button>
+      <nav class="menu" id="menu-container" data-menu>
+        <ul class="site-nav">
+          <li class="site-nav__item">
+            <a href="#features" class="site-nav__link">Features</a>
+          </li>
+          <li class="site-nav__item site-nav__item--current">
+            <a href="#showcase" class="site-nav__link site-nav__link--current">
+              Showcase
+            </a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#articles" class="site-nav__link">Articles</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#team" class="site-nav__link">Team</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#get in touch" class="site-nav__link">Get in touch</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero-title">
+            Start you project fast and polished with BC Boilerplates
+          </h1>
+          <p class="hero-text">
+            BC Boilerplates make starting your frontend and backend projects a
+            breeze. They come packed with essential features and top-notch
+            development practices, saving you time on tasks like authentication,
+            registration, and translations. Just clone our repositories and dive
+            into your projects with confidence, thanks to our trusted starter
+            kits used by hundreds of developers.
+          </p>
+          <a
+            href="https://react-boilerplate-coral.vercel.app/en"
+            class="hero-btn"
+            >Demo website</a
+          >
+        </div>
+      </section>
+      <section id="features">
+        <ul class="feature-list">
+          <li class="feature">
+            <svg width="80" height="80" aria-label="">
+              <use href="./images/sprite.svg#rectangle_1"></use>
+            </svg>
+            <h2 class="feature-title">Full Stack yet Independent</h2>
+            <p class="feature-text">
+              Use frontend and backend boilerplates together to create
+              full-stack web apps, or use them separately and enjoy flexibility.
+            </p>
+          </li>
+          <li class="feature">
+            <svg width="80" height="80" aria-label="">
+              <use href="./images/sprite.svg#rectangle_2"></use>
+            </svg>
+            <h2 class="feature-title">Best Practices and SSR</h2>
+            <p class="feature-text">
+              Start your project with built-in best practices, server-side
+              rendering, enhanced performance and SEO-friendliness.
+            </p>
+          </li>
+          <li class="feature">
+            <svg width="80" height="80" aria-label="">
+              <use href="./images/sprite.svg#rectangle_3"></use>
+            </svg>
+            <h2 class="feature-title">Internationalization</h2>
+            <p class="feature-text">
+              Build your app with an eye on internationalization and translate
+              the app to different langiages easily.
+            </p>
+          </li>
+        </ul>
+        <ul class="comparison">
+          <li class="frontend">
+            <svg width="81" height="40" aria-label="">
+              <use href="./images/sprite.svg#frontend"></use>
+            </svg>
+            <h2 class="comparison-title">Extensive React Boilerplate</h2>
+            <p class="comparison-text">
+              Extentensive React Boilerplate is based on React and Next.js, that
+              allows to build performant web apps with server-side rendering
+              support
+            </p>
+            <div class="git-stars">
+              <svg width="20" height="20" aria-label="">
+                <use href="./images/sprite.svg#star"></use>
+              </svg>
+              <span data-frontend-stars></span>
+              <svg width="24" height="24" aria-label="">
+                <use href="./images/sprite.svg#github"></use>
+              </svg>
+            </div>
+            <ul class="comparison-list">
+              <li class="comparison-item">
+                Public and private routing (+roles)
+                <span> + Saving 16 hrs</span>
+              </li>
+              <li class="comparison-item">
+                Internationalization <span>+ Saving 10 hrs</span>
+              </li>
+              <li class="comparison-item">
+                Material UI. Supports dark mode<span>+ Saving 10 hrs</span>
+              </li>
+              <li class="comparison-item">
+                UI Kit components - forms (React Hook Form is used), modal,
+                bars, loader<span> + Saving 10 hrs</span>
+              </li>
+              <li class="comparison-item">
+                Auth (Sign in, Sign up, Reset password, Confirm email, Refresh
+                Token, Logout)<span>+ Saving 40 hrs</span>
+              </li>
+              <li class="comparison-item">
+                Social Login (sign up via Google, and Facebook)<span>
+                  + Saving 20 hrs
+                </span>
+              </li>
+              <li class="comparison-item">
+                Admin Panel with user management (CRUD)<span
+                  >+ Saving 40 hrs</span
+                >
+              </li>
+              <li class="comparison-item">
+                View and edit user profile<span>+ Saving 12 hrs</span>
+              </li>
+              <li class="comparison-item">
+                File Upload (and avatar upload)<span>+ Saving 8 hrs</span>
+              </li>
+              <li class="comparison-item">
+                E2E (end-to-end) tests with Cypress <span>+ Saving 20 hrs</span>
+              </li>
+              <li class="comparison-item">
+                ESLint, Prettier, and Husky <span>+ Saving 2 hrs</span>
+              </li>
+              <li class="comparison-item">
+                CI (GitHub Actions) <span>+ Saving 5 hrs</span>
+              </li>
+            </ul>
+            <p class="total">Total<span>193 hrs saving</span></p>
+            <div class="comparison-buttons">
+              <a
+                href="https://github.com/brocoders/extensive-react-boilerplate"
+                class="btn-black"
+              >Github Repo</a>
+              <a
+                href="https://github.com/new?template_name=extensive-react-boilerplate&template_owner=brocoders"
+                class="btn-white"
+              >Use Template</a>
+            </div>
+          </li>
+          <li class="backend">
+            <svg width="72" height="40" aria-label="">
+              <use href="./images/sprite.svg#backend"></use>
+            </svg>
+            <h2 class="comparison-title">Nest.js Boilerplate</h2>
+            <p class="comparison-text">
+              RESTfull API Boilerplate is based on Nest.js and implements basic
+              features and best practices on the backend.
+            </p>
+            <div class="git-stars">
+              <svg width="20" height="20" aria-label="">
+                <use href="./images/sprite.svg#star"></use>
+              </svg>
+              <span data-backend-stars></span>
+              <svg width="24" height="24" aria-label="">
+                <use href="./images/sprite.svg#github"></use>
+              </svg>
+            </div>
+            <ul class="comparison-list">
+              <li class="comparison-item">
+                Database (PostgreSQL, TypeORM)<span>+ Saving 2 hrs</span>
+              </li>
+              <li class="comparison-item">
+                Seeds (test data)<span>+ Saving 8 hrs</span>
+              </li>
+              <li class="comparison-item">
+                Config Service (@nestjs/config).<span>+ Saving 5 hrs</span>
+              </li>
+              <li class="comparison-item">
+                Mailing (nodemailer, u/nestjs-modules/mailer)<span></span>
+                  + Saving 7 hrs
+                </span>
+              </li>
+              <li class="comparison-item">Sign in and sign up via email<span>+ Saving 16 hrs</span></li>
+              <li class="comparison-item">Forgot password<span> + Saving 6 hrs </span></li>
+              <li class="comparison-item">Social sign in (Apple, Facebook, Google, Twitter)<span>+ Saving 8 hrs</span></li>
+              <li class="comparison-item">Admin and User roles<span>+ Saving 2 hrs</span></li>
+              <li class="comparison-item">Serialization<span>+ Saving 5 hrs</span></li>
+              <li class="comparison-item">Translations I18N (nestjs-i18n)<span>+ Saving 5 hrs</span></li>
+              <li class="comparison-item">File uploads. Support local and Amazon S3 drivers<span>+ Saving 8 hrs</span></li>
+              <li class="comparison-item">Swagger for API documentation<span>+ Saving 6 hrs</span></li>
+              <li class="comparison-item">E2E and units tests<span>+ Saving 8 hrs</span></li>
+              <li class="comparison-item">Docker<span>+ Saving 8 hrs</span></li>
+              <li class="comparison-item">CI (Github Actions)<span>+ Saving 10 hrs</span></li>
+              <li class="comparison-item">Documentation <span>+ Saving 8 hrs</span></li>
+              <li class="comparison-item">Migrations <span>+ Saving 10 hrs</span></li>
+              <li class="comparison-item">Auto updating dependencies <span>+ Saving 4 hrs</span></li>
+            </ul>
+            <p class="total">Total<span>126 hrs saving</span></p>
+            <div class="comparison-buttons">
+              <a
+                href="https://github.com/brocoders/nestjs-boilerplate"
+                class="btn-black"
+              >Github Repo</a>
+              <a
+                href="https://github.com/new?template_name=nestjs-boilerplate&template_owner=brocoders"
+                class="btn-white"
+              >Use Template</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <script src="./js/menu.js"></script>
+      <script src="./js/stars.js" async></script>
+      <!-- <script>
+        (() => {
+          document
+            .querySelector(".js-speaker-form")
+            .addEventListener("submit", (e) => {
+              e.preventDefault();
+
+              new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(`${name}: ${value}`)
+              );
+            });
+        })();
+      </script> -->
+    </main>
+  </body>
+</html>

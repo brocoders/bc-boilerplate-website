@@ -1,0 +1,12 @@
+@import "./menu";
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+  list-style: none;
+  column-gap: 32px;
+}

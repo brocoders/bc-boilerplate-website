@@ -1,0 +1,17 @@
+.feature-list {
+  display: flex;
+}
+.git-stars {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+.comparison {
+  display: flex;
+}
+.btn-black {
+  @extend %button;
+}
+.btn-white {
+  @extend %button;
+}
