@@ -1,0 +1,22 @@
+.showcase-stars {
+  @include flex;
+}
+.dev-number-box {
+  @include flex;
+}
+.dev-number-box {
+  @include flex;
+}
+.cases-list {
+  @include flex($jc: space-between, $ali: flex-start);
+  flex-direction: column;
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
+}
+.case-item {
+  flex-basis: 33%;
+}
+.case-logo {
+  height: 85px;
+}

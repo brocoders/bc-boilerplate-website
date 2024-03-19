@@ -1,0 +1,17 @@
+.hero-btn {
+  background-color: $mainEmphasisColor;
+  color: #fff;
+  @extend %button;
+}
+.btn-black {
+  @extend %button;
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+.btn-white {
+  @extend %button;
+  color: $mainEmphasisColor;
+  border-color: $mainEmphasisColor;
+  color: $mainEmphasisColor;
+}

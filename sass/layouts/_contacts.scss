@@ -1,0 +1,15 @@
+#contacts {
+  background-color: #000;
+
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+}
+.contacts-text {
+  color: $lightTextColor;
+}
+.contacts-list {
+  @include flex;
+}

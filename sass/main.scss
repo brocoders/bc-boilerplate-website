@@ -3,8 +3,13 @@
 @import "./utils/mixins";
 @import "./utils/placeholders";
 @import "./base/common";
+@import "./base/buttons";
 @import "./utils/vs";
 
-// @import "./layouts/menu";
 @import "./layouts/header";
 @import "./layouts/features";
+@import "./layouts/form";
+@import "./layouts/demos";
+@import "./layouts/showcase";
+@import "./layouts/team";
+@import "./layouts/contacts";

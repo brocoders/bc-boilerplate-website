@@ -1,0 +1,15 @@
+.form-section {
+  @extend %container;
+  height: 280px;
+  background-image: url(../../images/hero-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.form-title {
+  color: #fff;
+}
+.form {
+  border-bottom: 1px solid #fff;
+}

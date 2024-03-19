@@ -5,14 +5,32 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  // outline: 1px solid tomato;
+}
+html,
+body,
+div,
+span,
+iframe,
+a,
+img,
+form,
+label,
+footer,
+header,
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 body {
-  // color: $primaryTextColor;
-  font-family: "Roboto", sans-serif;
+  color: $textColor;
+  font-family: "Manrope", sans-serif;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1;
 }
 h1,
 h2,
@@ -20,46 +38,59 @@ h3,
 p {
   margin-top: 0;
 }
+footer,
+header,
+nav,
+section {
+  display: block;
+}
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+input:focus,
+button:focus {
+  outline: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
 ul {
   list-style: none;
 }
-// address {
-//   font-style: normal;
-// }
-// header {
-//   border-bottom: 1px solid #ececec;
-// }
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
 link {
   text-decoration: none;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .container {
-  padding-left: $mobilePadding;
-  padding-right: $mobilePadding;
-  // padding-top: 60px;
-  // padding-bottom: 60px;
-  // margin-left: auto;
-  // margin-right: auto;
-
-  // @media screen and (min-width: 480px) {
-  //   width: 480px;
-  // }
-
-  // @media screen and (min-width: 768px) {
-  //   width: 768px;
-  // }
-
-  @media screen and (min-width: 1200px) {
-    padding-left: $sidePadding;
-    padding-right: $sidePadding;
-    // width: 1200px;
-    // padding-top: 94px;
-    // padding-bottom: 94px;
-  }
+  @extend %container;
 }
 
 .list {
@@ -81,10 +112,4 @@ link {
 }
 .hero-text {
   color: $lightTextColor;
-}
-.hero-btn {
-  background-color: $mainEmphasisColor;
-  color: #fff;
-  padding: 15px 40px;
-  @extend %button;
 }
