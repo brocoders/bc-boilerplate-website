@@ -1,9 +1,14 @@
 @import "./menu";
 
 .header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex($jc: space-between);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.logo-header {
+  @include flex;
+  @include titleFont($fs: 18px, $lh: 1, $ls: 1);
+  column-gap: 14px;
 }
 .site-nav {
   display: flex;

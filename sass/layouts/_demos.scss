@@ -1,5 +1,27 @@
+.demo-header {
+  padding-top: 48px;
+  position: relative;
+}
+.demo-basic {
+  @include font($fs: 22px, $lh: 1.46, $ls: -0.4px);
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+.demo-title {
+  @include titleFont($fs: 36px, $lh: 1.35, $ls: -2px);
+  margin-bottom: 24px;
+}
 .demo-item {
-  @include flex;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @media screen and (min-width: $desktop) {
+    @include flex;
+  }
+}
+.demo-text {
+  @include textFont;
+  margin-bottom: 24px;
 }
 .demo-img {
   max-height: 580px;

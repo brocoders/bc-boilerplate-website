@@ -1,0 +1,35 @@
+#articles {
+  @extend %container;
+  background-color: $bgdColor;
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+.articles-title {
+  @include titleFont($fs: 36px, $lh: 1.35, $ls: -2px);
+  margin-bottom: 25px;
+}
+.articles-list {
+  margin-top: 56px;
+}
+.article-item {
+  margin-bottom: 12px;
+}
+.source {
+  margin-top: 12px;
+  @include flex($jc: flex-start);
+  text-decoration: none;
+}
+.article-link {
+  @include subTitleFont($fs: 18px, $lh: 1.55, $ls: 0);
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 12px;
+}
+.article-source {
+  @include font($fs: 14px, $fw: 500, $lh: 2, $ls: 2px);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.fw-img {
+  display: inline;
+}

@@ -1,0 +1,16 @@
+footer {
+  padding-left: $mobilePadding;
+  padding-right: $mobilePadding;
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+.footer-list {
+  @include flex($ali: flex-start);
+  flex-direction: column;
+}
+.footer-link {
+  display: inline-flex;
+  margin-bottom: 36px;
+  border-bottom: 1px solid #000;
+  @include subTitleFont;
+}

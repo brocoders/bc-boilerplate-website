@@ -1,11 +1,86 @@
 .feature-list {
-  display: flex;
+  @extend %container;
+  padding-top: 48px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid $lightTextColor;
+  @media screen and (min-width: $desktop) {
+    @include flex;
+  }
+}
+.feature:not(:last-child) {
+  margin-bottom: 48px;
+}
+.feature-icon {
+  margin-bottom: 31px;
+}
+.feature-title {
+  @include subTitleFont;
+  margin-bottom: 20px;
+}
+.feature-text {
+  @include font($fs: 16px, $lh: 1.63, $ls: -0.36px);
+}
+
+.comparison {
+  @extend %container;
+  @media screen and (min-width: $desktop) {
+    @include flex;
+  }
+}
+.frontend,
+.backend {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+.backend {
+  background-color: $bgdColor;
+}
+.comparison-title {
+  @include titleFont($fs: 36px, $lh: 1.33, $ls: -2px);
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.comparison-text {
+  @include font($ls: -0.4px);
+  margin-bottom: 24px;
 }
 .git-stars {
   display: flex;
   align-items: center;
   column-gap: 4px;
+  margin-bottom: 32px;
 }
-.comparison {
-  display: flex;
+.git-text {
+  @include font($fs: 14px, $fw: 500, $lh: 2, $ls: 2px);
+  text-align: center;
+}
+.comparison-list {
+  padding-left: 15px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid $lightTextColor;
+}
+.comparison-item {
+  list-style-type: disc;
+  list-style-position: outside;
+  @include font(
+    $fw: 500,
+    $fs: 16px,
+    $lh: 1.31,
+    $ls: -0.36px,
+    $cl: $mainEmphasisColor
+  );
+  margin-bottom: 14px;
+  span {
+    color: $titleTextColor;
+    font-weight: 700;
+  }
+}
+.total {
+  @include subTitleFont($fs: 18px, $lh: 1.77);
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.comparison-buttons {
+  @include flex($jc: flex-start);
+  column-gap: 12px;
 }

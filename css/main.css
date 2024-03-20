@@ -1,6 +1,6 @@
 @font-face {
   font-family: "DIN Pro";
-  src: url("./DINPro/DINPro-Bold.woff2") format("woff2"), url("./DINPro/DINPro-Bold.woff") format("woff"), local("DIN Pro Bold");
+  src: url("../../fonts/DINPro/DINPro-Bold.woff2") format("woff2"), url("../../fonts/DINPro/DINPro-Bold.woff") format("woff"), url("../../fonts//DINPro/DINPro-Bold.ttf") format("truetype"), local("DIN Pro Bold");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -14,26 +14,26 @@
   ascent-override: 99%;
   src: local("Arial");
 }
-.btn-white, .btn-black, .hero-btn {
-  height: 50px;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  display: block;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  padding: 15px 40px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope Regular"), local("Manrope-Regular"), url("../../fonts/Manrope/Manrope-Regular.woff2") format("woff2"), url("../../fonts/Manrope/Manrope-Regular.woff") format("woff"), url("../../fonts/Manrope/Manrope-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
-
-.form-section, .container {
+@font-face {
+  font-family: "Manrope Bold";
+  src: local("Manrope Bold"), local("Manrope-Bold"), url("../../fonts/Manrope/Manrope-Bold.woff2") format("woff2"), url("../../fonts/Manrope/Manrope-Bold.woff") format("woff"), url("../../fonts/Manrope/Manrope-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+#articles, #team, .form-section, .comparison, .feature-list, .container {
   padding-left: 18px;
   padding-right: 18px;
 }
 @media screen and (min-width: 1200px) {
-  .form-section, .container {
+  #articles, #team, .form-section, .comparison, .feature-list, .container {
     padding-left: 170px;
     padding-right: 170px;
   }
@@ -55,6 +55,8 @@ div,
 span,
 iframe,
 a,
+ul,
+li,
 img,
 form,
 label,
@@ -150,38 +152,105 @@ img {
   padding: 0;
 }
 
+.hero-btn {
+  height: 50px;
+  min-width: 165px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-color: #d91965;
+  background-color: #d91965;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.35px;
+  font-weight: 700;
+  color: #fff;
+  width: 191px;
+}
 @media screen and (min-width: 1200px) {
-  .hero {
-    height: 800px;
-    background-image: url(../../images/hero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  .hero-btn {
+    padding: 15px 40px;
   }
 }
-
-.hero-title {
-  color: #fff;
-}
-
-.hero-text {
-  color: #d4d5d7;
-}
-
-.hero-btn {
-  background-color: #d91965;
-  color: #fff;
+.hero-btn:is(:hover, :focus) {
+  background-color: #fff;
+  color: #d91965;
+  border-color: #d91965;
 }
 
 .btn-black {
-  background-color: #000;
+  height: 50px;
+  min-width: 165px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-color: #000;
+  background-color: #000;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.35px;
+  font-weight: 700;
   color: #fff;
+}
+@media screen and (min-width: 1200px) {
+  .btn-black {
+    padding: 15px 40px;
+  }
+}
+.btn-black:is(:hover, :focus) {
+  background-color: #d91965;
+  border-color: #d91965;
 }
 
 .btn-white {
-  color: #d91965;
+  height: 50px;
+  min-width: 165px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-color: #d91965;
+  background-color: #fff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.35px;
+  font-weight: 700;
   color: #d91965;
+}
+@media screen and (min-width: 1200px) {
+  .btn-white {
+    padding: 15px 40px;
+  }
+}
+.btn-white:is(:hover, :focus) {
+  background-color: #d91965;
+  color: #fff;
 }
 
 .qualities--visually-hidden,
@@ -263,6 +332,21 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 1;
+  font-weight: 700;
+  color: #14181a;
+  column-gap: 14px;
 }
 
 .site-nav {
@@ -271,45 +355,318 @@ img {
   column-gap: 32px;
 }
 
+.hero {
+  background-color: #10133c;
+}
+.hero .container {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 800px;
+    background-image: url(../../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.hero-title {
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 48px;
+  line-height: 1.25;
+  letter-spacing: -3px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.hero-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  line-height: 1.46;
+  letter-spacing: 0px;
+  font-weight: 400;
+  color: #d4d5d7;
+  margin-bottom: 24px;
+}
+
 .feature-list {
-  display: flex;
+  padding-top: 48px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid #afb2b8;
+}
+@media screen and (min-width: 1200px) {
+  .feature-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.feature:not(:last-child) {
+  margin-bottom: 48px;
+}
+
+.feature-icon {
+  margin-bottom: 31px;
+}
+
+.feature-title {
+  font-family: "Manrope Bold", sans-serif;
+  font-size: 22px;
+  line-height: 1.55;
+  letter-spacing: -0.6px;
+  font-weight: 700;
+  color: #14181a;
+  margin-bottom: 20px;
+}
+
+.feature-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: -0.36px;
+  font-weight: 400;
+  color: #2e384d;
+}
+
+@media screen and (min-width: 1200px) {
+  .comparison {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.frontend,
+.backend {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.backend {
+  background-color: #fafafa;
+}
+
+.comparison-title {
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 36px;
+  line-height: 1.33;
+  letter-spacing: -2px;
+  font-weight: 700;
+  color: #14181a;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.comparison-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  line-height: 1.46;
+  letter-spacing: -0.4px;
+  font-weight: 400;
+  color: #2e384d;
+  margin-bottom: 24px;
 }
 
 .git-stars {
   display: flex;
   align-items: center;
   column-gap: 4px;
+  margin-bottom: 32px;
 }
 
-.comparison {
+.git-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #2e384d;
+  text-align: center;
+}
+
+.comparison-list {
+  padding-left: 15px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #afb2b8;
+}
+
+.comparison-item {
+  list-style-type: disc;
+  list-style-position: outside;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1.31;
+  letter-spacing: -0.36px;
+  font-weight: 500;
+  color: #d91965;
+  margin-bottom: 14px;
+}
+.comparison-item span {
+  color: #14181a;
+  font-weight: 700;
+}
+
+.total {
+  font-family: "Manrope Bold", sans-serif;
+  font-size: 18px;
+  line-height: 1.77;
+  letter-spacing: -0.6px;
+  font-weight: 700;
+  color: #14181a;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.comparison-buttons {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 12px;
 }
 
 .form-section {
-  height: 280px;
   background-image: url(../../images/hero-1.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding-top: 169px;
+  padding-bottom: 169px;
+}
+@media screen and (min-width: 1200px) {
+  .form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+  }
 }
 
 .form-title {
+  font-family: "Manrope Bold", sans-serif;
+  font-size: 48px;
+  line-height: 1.17;
+  letter-spacing: -1px;
+  font-weight: 700;
   color: #fff;
+  margin-bottom: 72px;
+  padding-bottom: 0;
 }
 
 .form {
+  width: 100%;
+  padding: 0;
   border-bottom: 1px solid #fff;
+  position: relative;
+}
+
+.input-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mail-input {
+  width: calc(100% - 50px);
+  height: 70px;
+  padding: 20px 0;
+  background-color: transparent;
+  border-width: 0px;
+  border-style: none;
+  border-color: transparent;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: -0.4px;
+  font-weight: 400;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .mail-input {
+    width: 400px;
+  }
+}
+.mail-input::placeholder {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: -0.4px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.form-btn {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50px;
+  font-weight: 700;
+  font-size: 32px;
+  font-family: "Manrope Bold", sans-serif;
+}
+
+.demo-header {
+  padding-top: 48px;
+  position: relative;
+}
+
+.demo-basic {
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  line-height: 1.46;
+  letter-spacing: -0.4px;
+  font-weight: 400;
+  color: #2e384d;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.demo-title {
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 36px;
+  line-height: 1.35;
+  letter-spacing: -2px;
+  font-weight: 700;
+  color: #14181a;
+  margin-bottom: 24px;
 }
 
 .demo-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .demo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.demo-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: -0.36px;
+  font-weight: 400;
+  color: #2e384d;
+  margin-bottom: 24px;
 }
 
 .demo-img {
   max-height: 580px;
+}
+
+#showcase {
+  margin-top: 48px;
 }
 
 .showcase-stars {
@@ -318,16 +675,82 @@ img {
   align-items: center;
 }
 
-.dev-number-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.showcase-description {
+  margin-bottom: 32px;
 }
 
-.dev-number-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.showcase-title {
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 36px;
+  line-height: 1.35;
+  letter-spacing: -2px;
+  font-weight: 700;
+  color: #14181a;
+}
+
+.showcase-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: -0.36px;
+  font-weight: 400;
+  color: #2e384d;
+  margin-bottom: 16px;
+}
+.showcase-text a {
+  font-family: "Manrope Bold", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: -0.36px;
+  font-weight: 700;
+  color: #14181a;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1200px) {
+  .dev-number-box {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+
+.dev-number {
+  background-color: #fafafa;
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 64px;
+  line-height: 1.15;
+  letter-spacing: -3px;
+  font-weight: 700;
+  color: #14181a;
+  padding: 24px 24px 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.developers {
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: -0.36px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fafafa;
+  text-transform: uppercase;
+  padding: 0 24px;
+}
+
+.dev-number-text {
+  background-color: #fafafa;
+  font-family: "Manrope Bold", sans-serif;
+  font-size: 22px;
+  line-height: 1.55;
+  letter-spacing: -0.6px;
+  font-weight: 700;
+  color: #14181a;
+  padding: 20px 24px 24px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .cases-list {
@@ -335,6 +758,7 @@ img {
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
+  margin-top: 96px;
 }
 @media screen and (min-width: 1200px) {
   .cases-list {
@@ -350,32 +774,275 @@ img {
   height: 85px;
 }
 
+.case-title {
+  font-family: "Manrope Bold", sans-serif;
+  font-size: 22px;
+  line-height: 1.55;
+  letter-spacing: -0.6px;
+  font-weight: 700;
+  color: #14181a;
+  margin-bottom: 16px;
+}
+
+.case-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1.625;
+  letter-spacing: -0.36px;
+  font-weight: 400;
+  color: #2e384d;
+  margin-bottom: 16px;
+}
+
+.case-item {
+  margin-bottom: 64px;
+}
+
+.case-link {
+  font-family: "Manrope Bold", sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0;
+  font-weight: 700;
+  color: #14181a;
+  text-decoration: underline;
+}
+
+#team {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.team-title {
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 36px;
+  line-height: 1.35;
+  letter-spacing: -2px;
+  font-weight: 700;
+  color: #14181a;
+  margin-bottom: 25px;
+}
+
+.team-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: -0.36px;
+  font-weight: 400;
+  color: #2e384d;
+  margin-bottom: 16px;
+}
+.team-text a {
+  font-family: "Manrope Bold", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: -0.36px;
+  font-weight: 700;
+  color: #14181a;
+  text-decoration: underline;
+}
+
 .contributors-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  column-gap: 102px;
+  flex-direction: column;
+  margin-top: 80px;
+}
+@media screen and (min-width: 1200px) {
+  .contributors-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 102px;
+  }
 }
 
 .contributor-item {
-  flex-basis: calc(33% - 68px);
+  padding-right: 43px;
+}
+.contributor-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1200px) {
+  .contributor-item {
+    flex-basis: calc(33% - 68px);
+  }
+}
+
+.contributor-name {
+  font-family: "Manrope Bold", sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.4px;
+  font-weight: 800;
+  color: #14181a;
+  margin-top: 32px;
+}
+
+.position {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.4px;
+  font-weight: 400;
+  color: #2e384d;
 }
 
 #contacts {
   background-color: #000;
   color: #fff;
+  padding-top: 64px;
+  padding-bottom: 96px;
 }
 #contacts a {
   color: #fff;
 }
 
+.contacts-title {
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 64px;
+  line-height: 1.15;
+  letter-spacing: -3px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
 .contacts-text {
-  color: #d4d5d7;
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  line-height: 1.46;
+  letter-spacing: -0.4px;
+  font-weight: 400;
+  color: #afb2b8;
+  margin-bottom: 48px;
 }
 
 .contacts-list {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  .contacts-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.contacts-item {
+  display: inline-flex;
+  margin-bottom: 48px;
+}
+.contacts-item:not(:last-child) {
+  border-bottom: 1px solid #fff;
+}
+
+.git-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 60%;
+  text-transform: uppercase;
+}
+.git-contacts span {
+  flex-basis: 100%;
+}
+@media screen and (max-width: 768px) {
+  .git-contacts span {
+    margin-bottom: 16px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+  }
+}
+.git-contacts a {
+  text-decoration: underline;
+}
+
+#articles {
+  background-color: #fafafa;
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.articles-title {
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: 36px;
+  line-height: 1.35;
+  letter-spacing: -2px;
+  font-weight: 700;
+  color: #14181a;
+  margin-bottom: 25px;
+}
+
+.articles-list {
+  margin-top: 56px;
+}
+
+.article-item {
+  margin-bottom: 12px;
+}
+
+.source {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
+  text-decoration: none;
+}
+
+.article-link {
+  font-family: "Manrope Bold", sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0;
+  font-weight: 700;
+  color: #14181a;
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.article-source {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #2e384d;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.fw-img {
+  display: inline;
+}
+
+footer {
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.footer-link {
+  display: inline-flex;
+  margin-bottom: 36px;
+  border-bottom: 1px solid #000;
+  font-family: "Manrope Bold", sans-serif;
+  font-size: 22px;
+  line-height: 1.55;
+  letter-spacing: -0.6px;
+  font-weight: 700;
+  color: #14181a;
 }/*# sourceMappingURL=main.css.map */

@@ -1,11 +1,75 @@
-@mixin font($fs: 18px, $lh: 1.56, $ls: 0.03em, $fw: 700) {
+@mixin font($fs: 22px, $lh: 1.46, $ls: 0px, $fw: 400, $cl: $textColor) {
+  font-family: "Manrope", sans-serif;
   font-size: $fs;
   line-height: $lh;
   letter-spacing: $ls;
   font-weight: $fw;
+  color: $cl;
 }
+@mixin titleFont(
+  $fs: 48px,
+  $lh: 1.25,
+  $ls: -3px,
+  $fw: 700,
+  $cl: $titleTextColor
+) {
+  font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  font-weight: $fw;
+  color: $cl;
+}
+@mixin subTitleFont(
+  $fs: 22px,
+  $lh: 1.55,
+  $ls: -0.6px,
+  $fw: 700,
+  $cl: $titleTextColor
+) {
+  font-family: "Manrope Bold", sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  font-weight: $fw;
+  color: $cl;
+}
+
+@mixin textFont($fs: 16px, $lh: 2, $ls: -0.36px, $fw: 400, $cl: $textColor) {
+  font-family: "Manrope", sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  font-weight: $fw;
+  color: $cl;
+}
+
 @mixin flex($df: flex, $jc: center, $ali: center) {
   display: $df;
   justify-content: $jc;
   align-items: $ali;
+}
+@mixin button($cl: #fff, $bc: transparent, $bgc: $mainEmphasisColor) {
+  height: 50px;
+  min-width: 165px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-color: $bc;
+  background-color: $bgc;
+
+  transition: color 250ms $timingFunction,
+    background-color 250ms $timingFunction, border-color 250ms $timingFunction;
+
+  @include titleFont($fs: 16px, $ls: -0.35px, $cl: $cl);
+  @media screen and (min-width: 1200px) {
+    padding: 15px 40px;
+  }
 }

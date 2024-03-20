@@ -1,15 +1,57 @@
+#showcase {
+  margin-top: 48px;
+}
 .showcase-stars {
   @include flex;
 }
-.dev-number-box {
-  @include flex;
+.showcase-description {
+  margin-bottom: 32px;
+}
+.showcase-title {
+  @include titleFont($fs: 36px, $lh: 1.35, $ls: -2px);
+}
+.showcase-text {
+  @include textFont;
+  margin-bottom: 16px;
+  a {
+    @include subTitleFont(
+      $fs: 16px,
+      $lh: 2,
+      $ls: -0.36px,
+      $cl: $titleTextColor
+    );
+    text-decoration: underline;
+  }
 }
 .dev-number-box {
-  @include flex;
+  @media screen and (min-width: $desktop) {
+    @include flex($ali: stretch);
+  }
+}
+.dev-number {
+  background-color: $bgdColor;
+  @include titleFont($fs: 64px, $lh: 1.15);
+  padding: 24px 24px 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.developers {
+  @include titleFont($fs: 24px, $lh: 1.33, $ls: -0.36px, $fw: 500, $cl: #000);
+  background-color: $bgdColor;
+  text-transform: uppercase;
+  padding: 0 24px;
+}
+.dev-number-text {
+  background-color: $bgdColor;
+  @include subTitleFont;
+  padding: 20px 24px 24px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .cases-list {
   @include flex($jc: space-between, $ali: flex-start);
   flex-direction: column;
+  margin-top: 96px;
   @media screen and (min-width: $desktop) {
     flex-direction: row;
   }
@@ -19,4 +61,19 @@
 }
 .case-logo {
   height: 85px;
+}
+.case-title {
+  @include subTitleFont;
+  margin-bottom: 16px;
+}
+.case-text {
+  @include textFont($lh: 1.625);
+  margin-bottom: 16px;
+}
+.case-item {
+  margin-bottom: 64px;
+}
+.case-link {
+  @include subTitleFont($fs: 18px, $lh: 1.55, $ls: 0);
+  text-decoration: underline;
 }

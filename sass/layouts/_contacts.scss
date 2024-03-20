@@ -2,14 +2,51 @@
   background-color: #000;
 
   color: #fff;
+  padding-top: 64px;
+  padding-bottom: 96px;
 
   a {
     color: #fff;
   }
 }
+.contacts-title {
+  @include titleFont($fs: 64px, $lh: 1.15, $cl: #fff);
+  margin-bottom: 24px;
+}
 .contacts-text {
-  color: $lightTextColor;
+  @include font($fs: 22px, $lh: 1.46, $ls: -0.4px, $cl: $lightTextColor);
+  margin-bottom: 48px;
 }
 .contacts-list {
-  @include flex;
+  @include flex($ali: flex-start);
+  flex-direction: column;
+  @media screen and (min-width: $desktop) {
+    @include flex;
+  }
+}
+.contacts-item {
+  display: inline-flex;
+  margin-bottom: 48px;
+  &:not(:last-child) {
+    border-bottom: 1px solid #fff;
+  }
+}
+.git-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 60%;
+  text-transform: uppercase;
+  span {
+    flex-basis: 100%;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 16px;
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+    }
+  }
+  a {
+    text-decoration: underline;
+  }
 }

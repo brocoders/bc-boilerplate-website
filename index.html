@@ -8,17 +8,24 @@
       content="Boilerplates to start you project fast and polished"
     />
     <title>BCBoilerplate</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400,500,700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/images/hero.jpg"
+      type="image/jpg"
+    /> -->
   </head>
   <body>
     <header class="container header-container">
-      <a href="./index.html" class="logo logo--header">
+      <a href="./index.html" class="logo-header">
         <svg width="26" height="36" aria-label="site logo">
           <use href="./images/sprite.svg#BroLogo"></use>
         </svg>
@@ -88,7 +95,12 @@
       <section id="features">
         <ul class="feature-list">
           <li class="feature">
-            <svg width="80" height="80" aria-label="">
+            <svg
+              width="80"
+              height="80"
+              class="feature-icon"
+              aria-label="Full Stack icon"
+            >
               <use href="./images/sprite.svg#rectangle_1"></use>
             </svg>
             <h2 class="feature-title">Full Stack yet Independent</h2>
@@ -98,7 +110,12 @@
             </p>
           </li>
           <li class="feature">
-            <svg width="80" height="80" aria-label="">
+            <svg
+              width="80"
+              height="80"
+              class="feature-icon"
+              aria-label="SSR icon"
+            >
               <use href="./images/sprite.svg#rectangle_2"></use>
             </svg>
             <h2 class="feature-title">Best Practices and SSR</h2>
@@ -108,7 +125,12 @@
             </p>
           </li>
           <li class="feature">
-            <svg width="80" height="80" aria-label="">
+            <svg
+              width="80"
+              height="80"
+              class="feature-icon"
+              aria-label="Internationalization icon"
+            >
               <use href="./images/sprite.svg#rectangle_3"></use>
             </svg>
             <h2 class="feature-title">Internationalization</h2>
@@ -133,57 +155,62 @@
               <svg width="20" height="20" aria-label="">
                 <use href="./images/sprite.svg#star"></use>
               </svg>
-              <span data-frontend-stars></span>
+              <span class="git-text" data-frontend-stars>120 on GitHub</span>
               <svg width="24" height="24" aria-label="">
                 <use href="./images/sprite.svg#github"></use>
               </svg>
             </div>
             <ul class="comparison-list">
               <li class="comparison-item">
-                Public and private routing (+roles)
-                <span> + Saving 16 hrs</span>
+                <span> Public and private routing (+roles)</span>
+                + Saving 16 hrs
               </li>
               <li class="comparison-item">
-                Internationalization <span>+ Saving 10 hrs</span>
+                <span>Internationalization </span> + Saving 10 hrs
               </li>
               <li class="comparison-item">
-                Material UI. Supports dark mode<span>+ Saving 10 hrs</span>
+                <span>Material UI. Supports dark mode</span> + Saving 10 hrs
               </li>
               <li class="comparison-item">
-                UI Kit components - forms (React Hook Form is used), modal,
-                bars, loader<span> + Saving 10 hrs</span>
-              </li>
-              <li class="comparison-item">
-                Auth (Sign in, Sign up, Reset password, Confirm email, Refresh
-                Token, Logout)<span>+ Saving 40 hrs</span>
-              </li>
-              <li class="comparison-item">
-                Social Login (sign up via Google, and Facebook)<span>
-                  + Saving 20 hrs
-                </span>
-              </li>
-              <li class="comparison-item">
-                Admin Panel with user management (CRUD)<span
-                  >+ Saving 40 hrs</span
+                <span
+                  >UI Kit components - forms (React Hook Form is used), modal,
+                  bars, loader</span
                 >
+                + Saving 10 hrs
               </li>
               <li class="comparison-item">
-                View and edit user profile<span>+ Saving 12 hrs</span>
+                <span>
+                  Auth (Sign in, Sign up, Reset password, Confirm email, Refresh
+                  Token, Logout)
+                </span>
+                + Saving 40 hrs
               </li>
               <li class="comparison-item">
-                File Upload (and avatar upload)<span>+ Saving 8 hrs</span>
+                <span> Social Login (sign up via Google, and Facebook) </span>
+                + Saving 20 hrs
               </li>
               <li class="comparison-item">
-                E2E (end-to-end) tests with Cypress <span>+ Saving 20 hrs</span>
+                <span> Admin Panel with user management (CRUD)</span> + Saving
+                40 hrs
               </li>
               <li class="comparison-item">
-                ESLint, Prettier, and Husky <span>+ Saving 2 hrs</span>
+                <span>View and edit user profile</span> + Saving 12 hrs
               </li>
               <li class="comparison-item">
-                CI (GitHub Actions) <span>+ Saving 5 hrs</span>
+                <span>File Upload (and avatar upload)</span> + Saving 8 hrs
+              </li>
+              <li class="comparison-item">
+                <span>E2E (end-to-end) tests with Cypress </span> + Saving 20
+                hrs
+              </li>
+              <li class="comparison-item">
+                <span>ESLint, Prettier, and Husky </span> + Saving 2 hrs
+              </li>
+              <li class="comparison-item">
+                <span>CI (GitHub Actions) </span> + Saving 5 hrs
               </li>
             </ul>
-            <p class="total">Total<span>193 hrs saving</span></p>
+            <p class="total">Total <span> 193 hrs saving</span></p>
             <div class="comparison-buttons">
               <a
                 href="https://github.com/brocoders/extensive-react-boilerplate"
@@ -217,65 +244,64 @@
             </div>
             <ul class="comparison-list">
               <li class="comparison-item">
-                Database (PostgreSQL, TypeORM)<span>+ Saving 2 hrs</span>
+                <span>Database (PostgreSQL, TypeORM)</span> + Saving 2 hrs
               </li>
               <li class="comparison-item">
-                Seeds (test data)<span>+ Saving 8 hrs</span>
+                <span>Seeds (test data)</span> + Saving 8 hrs
               </li>
               <li class="comparison-item">
-                Config Service (@nestjs/config).<span>+ Saving 5 hrs</span>
+                <span>Config Service (@nestjs/config).</span> + Saving 5 hrs
               </li>
               <li class="comparison-item">
-                Mailing (nodemailer, u/nestjs-modules/mailer)<span>
-                  + Saving 7 hrs
-                </span>
+                <span>Mailing (nodemailer, u/nestjs-modules/mailer)</span>
+                + Saving 7 hrs
               </li>
               <li class="comparison-item">
-                Sign in and sign up via email<span>+ Saving 16 hrs</span>
+                <span>Sign in and sign up via email</span> + Saving 16 hrs
               </li>
               <li class="comparison-item">
                 Forgot password<span> + Saving 6 hrs </span>
               </li>
               <li class="comparison-item">
-                Social sign in (Apple, Facebook, Google, Twitter)<span
-                  >+ Saving 8 hrs</span
-                >
+                <span> Social sign in (Apple, Facebook, Google, Twitter)</span>
+                + Saving 8 hrs
               </li>
               <li class="comparison-item">
-                Admin and User roles<span>+ Saving 2 hrs</span>
+                <span>Admin and User roles</span> + Saving 2 hrs
               </li>
               <li class="comparison-item">
-                Serialization<span>+ Saving 5 hrs</span>
+                <span>Serialization</span> + Saving 5 hrs
               </li>
               <li class="comparison-item">
-                Translations I18N (nestjs-i18n)<span>+ Saving 5 hrs</span>
+                <span>Translations I18N (nestjs-i18n)</span> + Saving 5 hrs
               </li>
               <li class="comparison-item">
-                File uploads. Support local and Amazon S3 drivers<span
-                  >+ Saving 8 hrs</span
-                >
+                <span>File uploads. Support local and Amazon S3 drivers</span> +
+                Saving 8 hrs
               </li>
               <li class="comparison-item">
-                Swagger for API documentation<span>+ Saving 6 hrs</span>
+                <span>Swagger for API documentation</span> + Saving 6 hrs
               </li>
               <li class="comparison-item">
-                E2E and units tests<span>+ Saving 8 hrs</span>
-              </li>
-              <li class="comparison-item">Docker<span>+ Saving 8 hrs</span></li>
-              <li class="comparison-item">
-                CI (Github Actions)<span>+ Saving 10 hrs</span>
+                <span>E2E and units tests</span> + Saving 8 hrs
               </li>
               <li class="comparison-item">
-                Documentation <span>+ Saving 8 hrs</span>
+                <span>Docker</span> + Saving 8 hrs
               </li>
               <li class="comparison-item">
-                Migrations <span>+ Saving 10 hrs</span>
+                <span>CI (Github Actions)</span> + Saving 10 hrs
               </li>
               <li class="comparison-item">
-                Auto updating dependencies <span>+ Saving 4 hrs</span>
+                <span>Documentation </span> + Saving 8 hrs
+              </li>
+              <li class="comparison-item">
+                <span>Migrations </span> + Saving 10 hrs
+              </li>
+              <li class="comparison-item">
+                <span> Auto updating dependencies </span> + Saving 4 hrs
               </li>
             </ul>
-            <p class="total">Total<span>126 hrs saving</span></p>
+            <p class="total"><span>Total </span> 126 hrs saving</p>
             <div class="comparison-buttons">
               <a
                 href="https://github.com/brocoders/nestjs-boilerplate"
@@ -294,109 +320,122 @@
       <section class="form-section">
         <h2 class="form-title">Request the estimation for your project</h2>
         <form class="form">
-          <input type="email" placeholder="Type your e-mail" />
-          <button type="submit">→</button>
+          <div class="input-box">
+            <svg width="20" height="14">
+              <use href="./images/sprite.svg#message"></use>
+            </svg>
+            <input
+              type="email"
+              placeholder="  Type your e-mail"
+              name="mail"
+              autocomplete="email"
+              class="mail-input"
+            />
+          </div>
+          <button type="submit" class="form-btn">→</button>
         </form>
       </section>
       <section class="container">
-        <div class="demo-item">
-          <div>
-            <h2>Product Features and Demo</h2>
-            <p>
-              From the user's viewpoint, our boilerplates offer basic features:
-              a homepage, sign-in, sign-up, and forgot password pages, as well
-              as user profile and profile editing capabilities. Admin panel is
-              also included. Plus, all functionalities are easily customizable
-              and extendable.
-            </p>
-          </div>
+        <div class="demo-header">
+          <h2 class="demo-title">Product Features and Demo</h2>
           <a
             href="https://react-boilerplate-coral.vercel.app/en"
             class="hero-btn"
           >
             Demo website
           </a>
-        </div>
-        <div class="demo-item">
-          <p class="demo-text">
-            The Sign In page enables login via email and password, or through
-            social login options such as Google or Facebook.
+          <p class="demo-basic">
+            From the user's viewpoint, our boilerplates offer basic features: a
+            homepage, sign-in, sign-up, and forgot password pages, as well as
+            user profile and profile editing capabilities. Admin panel is also
+            included. Plus, all functionalities are easily customizable and
+            extendable.
           </p>
-          <img
-            class="demo-img"
-            src="./images/SignIn.png"
-            loading="lazy"
-            alt="screenshot of Sign In page"
-          />
         </div>
-        <div class="demo-item">
-          <p class="demo-text">
-            The standard Sign Up page collects first and last name, email, and
-            password for registration. Users can also opt for faster
-            registration by utilizing Google or Facebook to provide their data.
-            Furthermore, adding more fields to the Sign Up page for additional
-            information is simple.
-          </p>
-          <img
-            class="demo-img"
-            src="./images/SignUp.png"
-            loading="lazy"
-            alt="screenshot of Sign Up page"
-          />
-        </div>
-        <div class="demo-item">
-          <p class="demo-text">
-            The Admin Panel features user management capabilities. Users
-            assigned with an admin role can view, edit, and delete users from
-            the list, and also have the option to manually create new users.
-          </p>
-          <img
-            class="demo-img"
-            src="./images/Users.png"
-            loading="lazy"
-            alt="screenshot of Users page"
-          />
-        </div>
-        <div class="demo-item">
-          <p class="demo-text">
-            Users can also view and edit their own profiles, including the
-            ability to add or change their avatar.
-          </p>
-          <img
-            class="demo-img"
-            src="./images/CreateUser.png"
-            loading="lazy"
-            alt="screenshot of Create User page"
-          />
-        </div>
+        <ul class="demo-list">
+          <li class="demo-item">
+            <p class="demo-text">
+              The Sign In page enables login via email and password, or through
+              social login options such as Google or Facebook.
+            </p>
+            <img
+              class="demo-img"
+              src="./images/SignIn.png"
+              loading="lazy"
+              alt="screenshot of Sign In page"
+            />
+          </li>
+          <li class="demo-item">
+            <p class="demo-text">
+              The standard Sign Up page collects first and last name, email, and
+              password for registration. Users can also opt for faster
+              registration by utilizing Google or Facebook to provide their
+              data. Furthermore, adding more fields to the Sign Up page for
+              additional information is simple.
+            </p>
+            <img
+              class="demo-img"
+              src="./images/SignUp.png"
+              loading="lazy"
+              alt="screenshot of Sign Up page"
+            />
+          </li>
+          <li class="demo-item">
+            <p class="demo-text">
+              The Admin Panel features user management capabilities. Users
+              assigned with an admin role can view, edit, and delete users from
+              the list, and also have the option to manually create new users.
+            </p>
+            <img
+              class="demo-img"
+              src="./images/Users.png"
+              loading="lazy"
+              alt="screenshot of Users page"
+            />
+          </li>
+          <li class="demo-item">
+            <p class="demo-text">
+              Users can also view and edit their own profiles, including the
+              ability to add or change their avatar.
+            </p>
+            <img
+              class="demo-img"
+              src="./images/CreateUser.png"
+              loading="lazy"
+              alt="screenshot of Create User page"
+            />
+          </li>
+        </ul>
       </section>
       <section id="showcase" class="container">
         <div class="showcase-stars">
-          <div>
-            <h2>Showcase</h2>
-            <p>
+          <div class="showcase-description">
+            <h2 class="showcase-title">Showcase</h2>
+            <p class="showcase-text">
               Boilerplates are production-ready and proven by many use cases. If
               you want to list your website here, please
-              <a href="#contacts">get in touch with us</a>.
+              <a href="#contacts"> get in touch with us</a>.
             </p>
             <div class="dev-number-box">
-              <p>> 500<span>developers</span></p>
-              <p>
+              <div>
+                <p class="dev-number">>500</p>
+                <p class="developers">developers</p>
+              </div>
+              <p class="dev-number-text">
                 clone these boilerplates per months to start their new project!
               </p>
             </div>
           </div>
-          <iframe
-            loading="lazy"
+          <!-- <iframe
             style="
               width: 100%;
               height: auto;
               min-width: 600px;
               min-height: 400px;
             "
-            src="https://star-history.com/embed?secret=#brocoders/nestjs-boilerplate&Date"
+            src="https://star-history.com/embed?secret=Z2hwXzRCbmdiVWtQR0NrcXQyWlM4TjEyeU5ZQ29SSUh4RTBndFBwQg==#brocoders/nestjs-boilerplate&Date"
             frameborder="0"
-          ></iframe>
+          ></iframe> -->
         </div>
 
         <ul class="cases-list">
@@ -404,21 +443,23 @@
             <svg width="238" height="40" aria-label="" class="case-logo">
               <use href="./images/sprite.svg#BudgetMentorLogo"></use>
             </svg>
-            <h2 class="">Budget Mentor</h2>
-            <p class="">
+            <h2 class="case-title">Budget Mentor</h2>
+            <p class="case-text">
               A web application for US university professors to help prepare
               National Science Foundation research budgets, allocate funds, and
               track key performance indicators according to the National Science
               Foundation.
             </p>
-            <a href="https://app.budget-mentor.com/">app.budget-mentor.com</a>
+            <a href="https://app.budget-mentor.com/" class="case-link"
+              >app.budget-mentor.com</a
+            >
           </li>
           <li class="case-item">
             <svg width="187" height="53" aria-label="" class="case-logo">
               <use href="./images/sprite.svg#CloudMentorLogo"></use>
             </svg>
-            <h2 class="">Cloud Mentor</h2>
-            <p class="">
+            <h2 class="case-title">Cloud Mentor</h2>
+            <p class="case-text">
               The Develop in Swift guides are flexible enough to help you
               support students brand new to coding and those with advanced
               skills. The lessons provide practical experience developing apps
@@ -430,8 +471,8 @@
             <svg width="200" height="60" aria-label="" class="case-logo">
               <use href="./images/sprite.svg#historian"></use>
             </svg>
-            <h2 class="">Historian</h2>
-            <p class="">
+            <h2 class="case-title">Historian</h2>
+            <p class="case-text">
               A comprehensive data management platform designed to capture
               real-time data from both analog and digital controllers. Utilizing
               intuitive visualization tools such as column charts, line charts,
@@ -445,7 +486,7 @@
         </ul>
       </section>
       <section id="articles" class="container">
-        <p>Recent articles</p>
+        <p class="articles-title">Recent articles</p>
         <a href="https://dev.to/rodik/" class="btn-black">Subscribe</a>
         <ul class="articles-list">
           <li class="article-item">
@@ -454,11 +495,15 @@
               href="https://dev.to/rodik/fast-project-start-with-nestjs-boilerplate-3992"
             >
               Fast Project Start with NestJS Boilerplate
-              <span class="article-source">on dev.to</span
-              ><svg width="20" height="20" aria-label="">
-                <use href="./images/sprite.svg#dev_to"></use>
-              </svg>
             </a>
+            <a
+              class="article-source"
+              href="https://dev.to/rodik/fast-project-start-with-nestjs-boilerplate-3992"
+              >on dev.to</a
+            >
+            <svg width="20" height="20" aria-label="link to dev_to">
+              <use href="./images/sprite.svg#dev_to"></use>
+            </svg>
           </li>
           <li class="article-item">
             <a
@@ -466,7 +511,7 @@
               href="https://javascript.plainenglish.io/top-5-nestjs-boilerplates-to-start-a-new-project-faster-a2a2270ea600"
             >
               Top 5 NestJS Boilerplates to start a new project faster
-              <span class="article-source">on Medium</span
+              <a class="article-source">on Medium</a
               ><svg width="20" height="20" aria-label="">
                 <use href="./images/sprite.svg#medium"></use>
               </svg>
@@ -478,12 +523,13 @@
               href="https://medium.com/front-end-weekly/mongodb-support-for-nestjs-boilerplate-with-hexagonal-architecture-2318e1ac3da5"
             >
               MongoDB support for NestJS Boilerplate with hexagonal architecture
-              <span class="article-source">in Frontend Weekly</span>
+              <a class="article-source">in Frontend Weekly</a>
               <img
                 src="./images/fw.png"
                 alt="Frontend Weekly logo"
                 width="20"
                 height="20"
+                class="fw-img"
               />
             </a>
           </li>
@@ -493,8 +539,8 @@
               href="https://hackernoon.com/streamline-nestjs-setup-with-extensive-react-boilerplate"
             >
               Streamline NestJS Setup with Extensive React Boilerplate
-              <span class="article-source">on Hackernoon</span
-              ><svg width="16" height="20" aria-label="">
+              <a class="article-source">on Hackernoon</a>
+              <svg width="16" height="20" aria-label="">
                 <use href="./images/sprite.svg#hackernoon"></use>
               </svg>
             </a>
@@ -502,9 +548,9 @@
         </ul>
       </section>
       <section id="team" class="container">
-        <h2>Team</h2>
+        <h2 class="team-title">Team</h2>
         <div>
-          <p>
+          <p class="team-text">
             The boilerplates are designed and supported by the Brocoders team.
             Feel free to
             <a href="#contacts">reach out to our company</a> for assistance or
@@ -568,7 +614,7 @@
         </ul>
       </section>
       <section id="contacts" class="container">
-        <h2>Get in touch with us!</h2>
+        <h2 class="contacts-title">Get in touch with us!</h2>
         <p class="contacts-text">
           If you seek consulting, support, or wish to collaborate, please
           contact us via email. For any inquiries regarding boilerplates, feel
@@ -576,80 +622,106 @@
         </p>
         <ul class="contacts-list">
           <li class="contacts-item">
-            <a href="mailto:boilerplates@brocoders.com"
-              ><svg width="20" height="14">
-                <use href="./images/sprite.svg#message"></use></svg
-              >boilerplates@brocoders.com</a
+            <a href="mailto:boilerplates@brocoders.com">
+              <svg width="20" height="14">
+                <use href="./images/sprite.svg#message"></use>
+              </svg>
+              boilerplates@brocoders.com</a
             >
           </li>
           <li class="contacts-item">
             <a
               href="https://discord.com/channels/520622812742811698/1197293125434093701"
-              ><svg width="21" height="16">
-                <use href="./images/sprite.svg#discord-light"></use></svg
-              >Our Discord channel</a
+            >
+              <svg width="21" height="16">
+                <use href="./images/sprite.svg#discord-light"></use>
+              </svg>
+              Our Discord channel</a
             >
           </li>
           <li class="contacts-item">
-            <p>
-              <svg width="24" height="24">
-                <use href="./images/sprite.svg#github_white"></use></svg
-              >Github Discussions:
+            <p class="git-contacts">
+              <span>
+                <svg width="24" height="24">
+                  <use href="./images/sprite.svg#github_white"></use>
+                </svg>
+                Github Discussions:
+              </span>
               <a
                 href="https://github.com/brocoders/extensive-react-boilerplate/discussions"
-                >Frontend</a
               >
+                Frontend
+              </a>
               <a
                 href="https://github.com/brocoders/nestjs-boilerplate/discussions"
-                >Backend</a
               >
+                Backend
+              </a>
             </p>
           </li>
         </ul>
       </section>
     </main>
     <footer>
-      <ul>
+      <ul class="footer-list">
         <li class="footer-link">
           <a
             href="https://discord.com/channels/520622812742811698/1197293125434093701"
-            ><svg width="26" height="20">
-              <use href="./images/sprite.svg#discord-black"></use></svg
-            >Discord</a
           >
+            <svg width="26" height="20">
+              <use href="./images/sprite.svg#discord-black"></use>
+            </svg>
+            Discord
+          </a>
         </li>
         <li class="footer-link">
-          <a href="https://github.com/brocoders/nestjs-boilerplate/discussions"
-            >Nest.js Boilerplate</a
-          >
+          <a href="https://github.com/brocoders/nestjs-boilerplate/discussions">
+            Nest.js Boilerplate
+          </a>
         </li>
         <li class="footer-link">
           <a
             href="https://github.com/brocoders/extensive-react-boilerplate/discussions"
-            >React Boilerplate</a
           >
+            React Boilerplate
+          </a>
         </li>
         <li class="footer-link">
-          <a href="https://react-boilerplate-coral.vercel.app/en">Demo</a>
+          <a href="https://react-boilerplate-coral.vercel.app/en"> Dem o</a>
         </li>
         <li class="footer-link">
-          <a href="https://dev.to/rodik/"
-            ><svg width="20" height="20" aria-label="">
-              <use href="./images/sprite.svg#dev_to"></use></svg
-            >Dev.to</a
-          >
+          <a href="https://dev.to/rodik/">
+            <svg width="20" height="20" aria-label="">
+              <use href="./images/sprite.svg#dev_to"></use>
+            </svg>
+            Dev.to
+          </a>
         </li>
         <li class="footer-link">
-          <a href="https://brocoders.com/"
-            ><svg width="20" height="20" aria-label="">
-              <use href="./images/sprite.svg#broLogo_black"></use></svg
-            >Brocoders</a
-          >
+          <a href="https://brocoders.com/">
+            <svg width="20" height="20" aria-label="">
+              <use href="./images/sprite.svg#broLogo_black"></use>
+            </svg>
+            Brocoders
+          </a>
         </li>
       </ul>
     </footer>
 
     <script src="./js/menu.js"></script>
     <script src="./js/stars.js" async></script>
+    <!-- <script>
+        (() => {
+          document
+            .querySelector(".js-speaker-form")
+            .addEventListener("submit", (e) => {
+              e.preventDefault();
+
+              new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(`${name}: ${value}`)
+              );
+            });
+        })();
+      </script> -->
   </body>
 </html>

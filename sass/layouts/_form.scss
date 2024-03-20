@@ -1,15 +1,69 @@
 .form-section {
   @extend %container;
-  height: 280px;
   background-image: url(../../images/hero-1.png);
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  align-items: center;
+  @include flex;
+  flex-direction: column;
+  padding-top: 169px;
+  padding-bottom: 169px;
+  // align-items: center;
+  @media screen and (min-width: $desktop) {
+    @include flex;
+    height: 280px;
+  }
 }
 .form-title {
-  color: #fff;
+  @include subTitleFont($fs: 48px, $lh: 1.17, $cl: #fff, $ls: -1px);
+  margin-bottom: 72px;
+  padding-bottom: 0;
 }
 .form {
+  // outline: red solid 1px;
+  width: 100%;
+  padding: 0;
   border-bottom: 1px solid #fff;
+  position: relative;
+}
+.input-box {
+  @include flex($jc: flex-start);
+}
+.mail-input {
+  // outline: red solid 1px;
+  width: calc(100% - 50px); // submit button width
+  height: 70px;
+  padding: 20px 0;
+  background-color: transparent;
+  border-width: 0px;
+  border-style: none;
+  border-color: transparent;
+  // border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+
+  @include font($fs: 18px, $lh: 1.67, $ls: -0.4px, $cl: #fff);
+
+  @media screen and (min-width: $tablet) {
+    width: 400px;
+  }
+  &::placeholder {
+    @include font($fs: 18px, $lh: 1.67, $ls: -0.4px, $cl: #fff);
+    // &::before {
+    //   content: "";
+    //   display: block;
+    //   width: 10px;
+    //   height: 10px;
+    //   background-image: url(../../images/github.png);
+    // }
+  }
+}
+.form-btn {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50px;
+  font-weight: 700;
+  font-size: 32px;
+  font-family: "Manrope Bold", sans-serif;
 }

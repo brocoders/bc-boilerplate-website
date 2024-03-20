@@ -1,17 +1,23 @@
 .hero-btn {
-  background-color: $mainEmphasisColor;
-  color: #fff;
-  @extend %button;
+  @include button($bc: $mainEmphasisColor);
+  width: 191px;
+  &:is(:hover, :focus) {
+    background-color: #fff;
+    color: $mainEmphasisColor;
+    border-color: $mainEmphasisColor;
+  }
 }
 .btn-black {
-  @extend %button;
-  background-color: #000;
-  border-color: #000;
-  color: #fff;
+  @include button($bc: #000, $bgc: #000, $cl: #fff);
+  &:is(:hover, :focus) {
+    background-color: $mainEmphasisColor;
+    border-color: $mainEmphasisColor;
+  }
 }
 .btn-white {
-  @extend %button;
-  color: $mainEmphasisColor;
-  border-color: $mainEmphasisColor;
-  color: $mainEmphasisColor;
+  @include button($bc: $mainEmphasisColor, $bgc: #fff, $cl: $mainEmphasisColor);
+  &:is(:hover, :focus) {
+    background-color: $mainEmphasisColor;
+    color: #fff;
+  }
 }

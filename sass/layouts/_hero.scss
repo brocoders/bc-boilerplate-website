@@ -1,0 +1,23 @@
+.hero {
+  background-color: $blackBackground;
+
+  .container {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 800px;
+    background-image: url(../../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.hero-title {
+  @include titleFont($cl: #fff);
+  margin-bottom: 24px;
+}
+.hero-text {
+  @include font($cl: $charcoalTextColor);
+  margin-bottom: 24px;
+}

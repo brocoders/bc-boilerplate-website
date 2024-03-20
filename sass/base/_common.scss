@@ -5,6 +5,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  // outline: red solid 1px;
 }
 html,
 body,
@@ -12,6 +13,8 @@ div,
 span,
 iframe,
 a,
+ul,
+li,
 img,
 form,
 label,
@@ -97,19 +100,4 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.hero {
-  @media screen and (min-width: 1200px) {
-    height: 800px;
-    background-image: url(../../images/hero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-.hero-title {
-  color: #fff;
-}
-.hero-text {
-  color: $lightTextColor;
 }
