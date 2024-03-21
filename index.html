@@ -54,10 +54,8 @@
           <li class="site-nav__item">
             <a href="#features" class="site-nav__link">Features</a>
           </li>
-          <li class="site-nav__item site-nav__item--current">
-            <a href="#showcase" class="site-nav__link site-nav__link--current">
-              Showcase
-            </a>
+          <li class="site-nav__item">
+            <a href="#showcase" class="site-nav__link"> Showcase </a>
           </li>
           <li class="site-nav__item">
             <a href="#articles" class="site-nav__link">Articles</a>
@@ -319,8 +317,20 @@
       </section>
       <section class="form-section">
         <h2 class="form-title">Request the estimation for your project</h2>
-        <form class="form">
-          <div class="input-box">
+        <div>
+          <script
+            charset="utf-8"
+            type="text/javascript"
+            src="//js.hsforms.net/forms/embed/v2.js"
+          ></script>
+          <script>
+            hbspt.forms.create({
+              region: "na1",
+              portalId: "7227761",
+              formId: "da33e91f-fa42-4232-b67e-540c4f76d4d9",
+            });
+          </script>
+          <!-- <div class="input-box">
             <svg width="20" height="14">
               <use href="./images/sprite.svg#message"></use>
             </svg>
@@ -332,8 +342,8 @@
               class="mail-input"
             />
           </div>
-          <button type="submit" class="form-btn">→</button>
-        </form>
+          <button type="submit" class="form-btn">→</button> -->
+        </div>
       </section>
       <section class="container">
         <div class="demo-header">
@@ -687,7 +697,7 @@
           </a>
         </li>
         <li class="footer-link">
-          <a href="https://react-boilerplate-coral.vercel.app/en"> Dem o</a>
+          <a href="https://react-boilerplate-coral.vercel.app/en"> Demo</a>
         </li>
         <li class="footer-link">
           <a href="https://dev.to/rodik/">
@@ -710,18 +720,5 @@
 
     <script src="./js/menu.js"></script>
     <script src="./js/stars.js" async></script>
-    <!-- <script>
-        (() => {
-          document
-            .querySelector(".js-speaker-form")
-            .addEventListener("submit", (e) => {
-              e.preventDefault();
-
-              new FormData(e.currentTarget).forEach((value, name) =>
-                console.log(`${name}: ${value}`)
-              );
-            });
-        })();
-      </script> -->
   </body>
 </html>

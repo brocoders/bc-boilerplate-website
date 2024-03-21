@@ -14,4 +14,23 @@
   display: flex;
   list-style: none;
   column-gap: 32px;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+  @media screen and (max-width: $tablet) {
+    row-gap: 32px;
+  }
+}
+.site-nav__item.site-nav__item--current {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 52px;
+  }
+}
+.site-nav__link {
+  @include font($fs: 16px, $lh: 1.63);
+  &:is(:hover, :focus, :active) {
+    text-decoration: underline;
+    // @include subTitleFont($fs: 16px, $lh: 1.63, $ls: 0);
+  }
 }

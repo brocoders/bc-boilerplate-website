@@ -8,9 +8,12 @@
   @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    top: 60px;
+    right: 0;
+    width: 80%;
+    height: 50%;
+    padding: 60px;
+    border-bottom-left-radius: 20px;
   }
   @media screen and (min-width: 768px) {
     display: flex;

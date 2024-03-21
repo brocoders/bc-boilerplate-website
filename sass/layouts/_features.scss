@@ -7,9 +7,13 @@
     @include flex;
   }
 }
+
 .feature:not(:last-child) {
-  margin-bottom: 48px;
+  @media (max-width: #{$tablet - 1}) {
+    margin-bottom: 48px;
+  }
 }
+
 .feature-icon {
   margin-bottom: 31px;
 }
