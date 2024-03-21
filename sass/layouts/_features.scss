@@ -5,12 +5,17 @@
   border-bottom: 1px solid $lightTextColor;
   @media screen and (min-width: $desktop) {
     @include flex;
+    padding-top: 72px;
+    padding-bottom: 96px;
   }
 }
 
 .feature:not(:last-child) {
   @media (max-width: #{$tablet - 1}) {
     margin-bottom: 48px;
+  }
+  @media (min-width: $tablet) {
+    margin-right: 81px;
   }
 }
 
@@ -26,18 +31,44 @@
 }
 
 .comparison {
-  @extend %container;
+  @media (max-width: #{$desktop - 1}) {
+    padding-left: $mobilePadding;
+    padding-right: $mobilePadding;
+  }
   @media screen and (min-width: $desktop) {
-    @include flex;
+    @include flex($ali: stretch);
   }
 }
 .frontend,
 .backend {
   padding-top: 48px;
   padding-bottom: 64px;
+  @media screen and (min-width: $desktop) {
+    flex-basis: 50%;
+    padding-bottom: 96px;
+    padding-top: 64px;
+  }
+}
+.frontend {
+  @media screen and (min-width: $desktop) {
+    padding-left: 167px;
+    padding-right: 53px;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .comparison-buttons {
+      margin-top: auto;
+    }
+  }
 }
 .backend {
   background-color: $bgdColor;
+  @media screen and (min-width: $desktop) {
+    padding-left: 40px;
+    padding-right: 167px;
+  }
 }
 .comparison-title {
   @include titleFont($fs: 36px, $lh: 1.33, $ls: -2px);

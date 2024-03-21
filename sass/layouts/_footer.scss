@@ -3,14 +3,28 @@ footer {
   padding-right: $mobilePadding;
   padding-top: 48px;
   padding-bottom: 64px;
+  @media screen and (min-width: $desktop) {
+    padding-left: $sidePadding;
+    padding-right: $sidePadding;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
 }
 .footer-list {
   @include flex($ali: flex-start);
   flex-direction: column;
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .footer-link {
   display: inline-flex;
   margin-bottom: 36px;
   border-bottom: 1px solid #000;
   @include subTitleFont;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }

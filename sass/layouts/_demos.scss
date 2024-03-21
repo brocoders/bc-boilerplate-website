@@ -1,15 +1,32 @@
+#features {
+  background-color: #fafafa;
+}
 .demo-header {
+  @extend %container;
   padding-top: 48px;
   position: relative;
+  @media screen and (min-width: $desktop) {
+    .hero-btn {
+      position: absolute;
+      top: 48px;
+      right: $sidePadding;
+    }
+  }
 }
 .demo-basic {
   @include font($fs: 22px, $lh: 1.46, $ls: -0.4px);
   margin-top: 24px;
   margin-bottom: 32px;
+  @media screen and (min-width: $desktop) {
+    width: calc(100% - 200px);
+  }
 }
 .demo-title {
   @include titleFont($fs: 36px, $lh: 1.35, $ls: -2px);
   margin-bottom: 24px;
+  @media screen and (min-width: $desktop) {
+    font-size: 48px;
+  }
 }
 .demo-item {
   padding-top: 24px;
@@ -17,6 +34,14 @@
 
   @media screen and (min-width: $desktop) {
     @include flex;
+
+    &:nth-child(odd) {
+      margin-left: $sidePadding;
+    }
+    &:nth-child(even) {
+      margin-right: $sidePadding;
+      flex-direction: row-reverse;
+    }
   }
 }
 .demo-text {
@@ -26,3 +51,5 @@
 .demo-img {
   max-height: 580px;
 }
+//  padding-left: $mobilePadding;
+// padding-right: $mobilePadding;

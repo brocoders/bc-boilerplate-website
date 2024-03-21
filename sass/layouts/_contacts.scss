@@ -12,16 +12,25 @@
 .contacts-title {
   @include titleFont($fs: 64px, $lh: 1.15, $cl: #fff);
   margin-bottom: 24px;
+  @media screen and (min-width: $desktop) {
+    font-size: 72px;
+    line-height: 1;
+    letter-spacing: -3.6px;
+  }
 }
 .contacts-text {
   @include font($fs: 22px, $lh: 1.46, $ls: -0.4px, $cl: $lightTextColor);
   margin-bottom: 48px;
+  @media screen and (min-width: $desktop) {
+    width: 80%;
+  }
 }
 .contacts-list {
   @include flex($ali: flex-start);
   flex-direction: column;
   @media screen and (min-width: $desktop) {
-    @include flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 .contacts-item {
@@ -33,17 +42,27 @@
 }
 .git-contacts {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 60%;
-  text-transform: uppercase;
+  align-items: center;
+  column-gap: 40px;
   span {
-    flex-basis: 100%;
-    @media screen and (max-width: $tablet) {
-      margin-bottom: 16px;
-      display: flex;
-      column-gap: 10px;
-      align-items: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: #{$desktop - 1}) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+    span {
+      display: block;
+      flex-basis: 100%;
+      @media screen and (max-width: $tablet) {
+        margin-bottom: 16px;
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+      }
     }
   }
   a {

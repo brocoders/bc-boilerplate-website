@@ -3,9 +3,17 @@
   padding-top: 48px;
   padding-bottom: 64px;
 }
+.team-description {
+  @media screen and (min-width: $desktop) {
+    @include flex($ali: flex-end, $jc: space-between);
+  }
+}
 .team-title {
   @include titleFont($fs: 36px, $lh: 1.35, $ls: -2px);
   margin-bottom: 25px;
+  @media screen and (min-width: $desktop) {
+    font-size: 48px;
+  }
 }
 
 .team-text {
@@ -19,6 +27,9 @@
       $cl: $titleTextColor
     );
     text-decoration: underline;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
   }
 }
 

@@ -3,10 +3,22 @@
   background-color: $bgdColor;
   padding-top: 48px;
   padding-bottom: 64px;
+  position: relative;
+  @media screen and (min-width: $desktop) {
+    .btn-black {
+      position: absolute;
+      top: 48px;
+      right: $sidePadding;
+    }
+  }
 }
 .articles-title {
   @include titleFont($fs: 36px, $lh: 1.35, $ls: -2px);
   margin-bottom: 25px;
+  @media screen and (min-width: $desktop) {
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
 }
 .articles-list {
   margin-top: 56px;
@@ -24,6 +36,11 @@
   text-decoration: underline;
   display: block;
   margin-bottom: 12px;
+  @media screen and (min-width: $desktop) {
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline;
+  }
 }
 .article-source {
   @include font($fs: 14px, $fw: 500, $lh: 2, $ls: 2px);

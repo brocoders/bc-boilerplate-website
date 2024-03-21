@@ -9,11 +9,28 @@
   padding-bottom: 169px;
 
   @media screen and (min-width: $desktop) {
-    height: 280px;
+    padding-top: 85px;
+    padding-bottom: 85px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+  }
+  @media screen and (min-width: 1350px) {
+    justify-content: flex-start;
+    column-gap: 100px;
   }
 }
 .form-title {
   @include subTitleFont($fs: 48px, $lh: 1.17, $cl: #fff, $ls: -1px);
   margin-bottom: 72px;
   padding-bottom: 0;
+  @media screen and (min-width: $desktop) {
+    flex-basis: 50%;
+    margin-bottom: 0;
+  }
+}
+.form-container {
+  position: relative;
+  top: 40px;
 }

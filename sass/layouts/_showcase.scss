@@ -3,12 +3,27 @@
 }
 .showcase-stars {
   @include flex;
+  @media (max-width: #{$desktop - 1}) {
+    flex-direction: column;
+  }
+  @media (min-width: $desktop) {
+    align-items: flex-start;
+    column-gap: 120px;
+  }
 }
+
 .showcase-description {
   margin-bottom: 32px;
+  @media screen and (min-width: $desktop) {
+    flex-basis: 46%;
+  }
 }
 .showcase-title {
   @include titleFont($fs: 36px, $lh: 1.35, $ls: -2px);
+  @media screen and (min-width: $desktop) {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
 }
 .showcase-text {
   @include textFont;
@@ -26,6 +41,7 @@
 .dev-number-box {
   @media screen and (min-width: $desktop) {
     @include flex($ali: stretch);
+    max-width: 512px;
   }
 }
 .dev-number {
@@ -34,12 +50,19 @@
   padding: 24px 24px 0;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  @media screen and (min-width: $desktop) {
+    border-top-right-radius: 0;
+    padding: 16px 20px 0 24px;
+  }
 }
 .developers {
   @include titleFont($fs: 24px, $lh: 1.33, $ls: -0.36px, $fw: 500, $cl: #000);
   background-color: $bgdColor;
   text-transform: uppercase;
-  padding: 0 24px;
+  @media screen and (min-width: $desktop) {
+    padding: 0 20px 16px 24px;
+    border-bottom-left-radius: 20px;
+  }
 }
 .dev-number-text {
   background-color: $bgdColor;
@@ -47,6 +70,10 @@
   padding: 20px 24px 24px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  @media screen and (min-width: $desktop) {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 20px;
+  }
 }
 .cases-list {
   @include flex($jc: space-between, $ali: flex-start);
@@ -54,10 +81,20 @@
   margin-top: 96px;
   @media screen and (min-width: $desktop) {
     flex-direction: row;
+    padding: 21px 24px 96px 20px;
+  }
+  .case-item {
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
   }
 }
 .case-item {
   flex-basis: 33%;
+  margin-bottom: 64px;
 }
 .case-logo {
   height: 85px;
@@ -70,10 +107,10 @@
   @include textFont($lh: 1.625);
   margin-bottom: 16px;
 }
-.case-item {
-  margin-bottom: 64px;
-}
 .case-link {
   @include subTitleFont($fs: 18px, $lh: 1.55, $ls: 0);
   text-decoration: underline;
+}
+.star-history-link {
+  flex-basis: 50%;
 }
