@@ -8,12 +8,15 @@
 
   @media screen and (min-width: $desktop) {
     height: 800px;
-    background-image: url(../../images/hero.jpg);
+    background-image: url(../../images/hero-2x.png);
     background-repeat: no-repeat;
     background-size: cover;
 
     .container {
       width: 60%;
+    }
+    .hero-btn {
+      width: 200px;
     }
   }
 }
