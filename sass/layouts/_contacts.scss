@@ -39,6 +39,9 @@
   &:not(:last-child) {
     border-bottom: 1px solid #fff;
   }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 .git-contacts {
   display: flex;
