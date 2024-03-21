@@ -1012,6 +1012,7 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 102px;
+    row-gap: 64px;
   }
 }
 
@@ -1024,6 +1025,9 @@ img {
 @media screen and (min-width: 1200px) {
   .contributor-item {
     flex-basis: calc(33% - 68px);
+  }
+  .contributor-item:not(:last-child) {
+    margin-bottom: 0;
   }
 }
 

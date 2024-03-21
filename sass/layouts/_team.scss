@@ -41,6 +41,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 102px;
+    row-gap: 64px;
   }
 }
 .contributor-item {
@@ -50,6 +51,9 @@
   }
   @media screen and (min-width: $desktop) {
     flex-basis: calc(33% - 68px);
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }
 .contributor-name {
