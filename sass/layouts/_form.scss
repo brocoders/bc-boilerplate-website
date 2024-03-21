@@ -1,7 +1,7 @@
 .form-section {
   @extend %container;
   background-color: $blackBackground;
-  background-image: url(../../images/form-bg.png);
+  background-image: url("../images/form-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   @include flex($ali: stretch);

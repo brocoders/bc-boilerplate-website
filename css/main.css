@@ -400,7 +400,7 @@ img {
 @media screen and (min-width: 1200px) {
   .hero {
     height: 800px;
-    background-image: url(../../images/hero-2x.png);
+    background-image: url("../images/hero-2x.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -626,7 +626,7 @@ img {
 
 .form-section {
   background-color: #10133c;
-  background-image: url(../../images/form-bg.png);
+  background-image: url("../images/form-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
