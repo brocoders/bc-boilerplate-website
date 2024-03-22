@@ -1,12 +1,13 @@
 #contacts {
   background-color: #000;
-
-  color: #fff;
   padding-top: 64px;
   padding-bottom: 96px;
 
   a {
-    color: #fff;
+    @include subTitleFont($fs: 18px, $lh: 1.33, $ls: -0.6px, $cl: #fff);
+  }
+  span {
+    @include font($fs: 14px, $fw: 500, $lh: 2, $ls: 1.8px, $cl: #fff);
   }
 }
 .contacts-title {
@@ -56,7 +57,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    width: 60%;
+    width: 65%;
     span {
       display: block;
       flex-basis: 100%;

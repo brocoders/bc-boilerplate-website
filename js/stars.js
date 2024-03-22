@@ -8,7 +8,6 @@
   fetch("https://api.github.com/repos/brocoders/nestjs-boilerplate")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       const starsCountNumber = data.stargazers_count;
       if (starsCountNumber) {
         backStarsCount = starsCountNumber + " ON GITHUB";
@@ -25,7 +24,6 @@
   fetch("https://api.github.com/repos/brocoders/extensive-react-boilerplate")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       const starsCountNumber = data.stargazers_count;
       if (starsCountNumber) {
         frontStarsCount = starsCountNumber + " ON GITHUB";

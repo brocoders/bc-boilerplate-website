@@ -31,7 +31,10 @@
 .demo-item {
   padding-top: 24px;
   padding-bottom: 24px;
-
+  @media (max-width: #{$desktop - 1}) {
+    padding-left: $mobilePadding;
+    padding-right: $mobilePadding;
+  }
   @media screen and (min-width: $desktop) {
     @include flex;
 
@@ -51,5 +54,3 @@
 .demo-img {
   max-height: 580px;
 }
-//  padding-left: $mobilePadding;
-// padding-right: $mobilePadding;

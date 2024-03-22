@@ -4,6 +4,10 @@
   @include flex($jc: space-between);
   padding-top: 12px;
   padding-bottom: 12px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
 }
 .logo-header {
   @include flex;
@@ -31,6 +35,5 @@
   @include font($fs: 16px, $lh: 1.63);
   &:is(:hover, :focus, :active) {
     text-decoration: underline;
-    // @include subTitleFont($fs: 16px, $lh: 1.63, $ls: 0);
   }
 }

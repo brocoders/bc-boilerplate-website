@@ -2,9 +2,10 @@
   @extend %container;
   padding-top: 48px;
   padding-bottom: 64px;
-  border-bottom: 1px solid $lightTextColor;
+  @media screen and (min-width: $tablet) {
+    @include flex($ali: flex-start);
+  }
   @media screen and (min-width: $desktop) {
-    @include flex;
     padding-top: 72px;
     padding-bottom: 96px;
   }
@@ -15,6 +16,9 @@
     margin-bottom: 48px;
   }
   @media (min-width: $tablet) {
+    margin-right: 40px;
+  }
+  @media (min-width: $desktop) {
     margin-right: 81px;
   }
 }
@@ -25,16 +29,18 @@
 .feature-title {
   @include subTitleFont;
   margin-bottom: 20px;
+  @media (min-width: $tablet) {
+    height: 70px;
+  }
+  @media (min-width: $desktop) {
+    height: auto;
+  }
 }
 .feature-text {
   @include font($fs: 16px, $lh: 1.63, $ls: -0.36px);
 }
 
 .comparison {
-  @media (max-width: #{$desktop - 1}) {
-    padding-left: $mobilePadding;
-    padding-right: $mobilePadding;
-  }
   @media screen and (min-width: $desktop) {
     @include flex($ali: stretch);
   }
@@ -43,6 +49,11 @@
 .backend {
   padding-top: 48px;
   padding-bottom: 64px;
+  @media (max-width: #{$desktop - 1}) {
+    padding-left: $mobilePadding;
+    padding-right: $mobilePadding;
+  }
+
   @media screen and (min-width: $desktop) {
     flex-basis: 50%;
     padding-bottom: 96px;
@@ -50,6 +61,8 @@
   }
 }
 .frontend {
+  border-top: 1px solid $bgdColor;
+  padding-left: $mobilePadding;
   @media screen and (min-width: $desktop) {
     padding-left: 167px;
     padding-right: 53px;
@@ -114,6 +127,9 @@
   @include subTitleFont($fs: 18px, $lh: 1.77);
   margin-top: 32px;
   margin-bottom: 32px;
+  span {
+    color: $mainEmphasisColor;
+  }
 }
 .comparison-buttons {
   @include flex($jc: flex-start);

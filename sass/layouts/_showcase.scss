@@ -44,14 +44,25 @@
     max-width: 512px;
   }
 }
-.dev-number {
+.dev-number-upper {
   background-color: $bgdColor;
-  @include titleFont($fs: 64px, $lh: 1.15);
-  padding: 24px 24px 0;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  @include flex;
+  flex-direction: column;
   @media screen and (min-width: $desktop) {
     border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+  }
+}
+.dev-number {
+  // background-color: $bgdColor;
+  @include titleFont($fs: 64px, $lh: 1.15);
+  padding: 24px 24px 0;
+  // border-top-left-radius: 20px;
+  // border-top-right-radius: 20px;
+  @media screen and (min-width: $desktop) {
+    // border-top-right-radius: 0;
     padding: 16px 20px 0 24px;
   }
 }
@@ -59,9 +70,10 @@
   @include titleFont($fs: 24px, $lh: 1.33, $ls: -0.36px, $fw: 500, $cl: #000);
   background-color: $bgdColor;
   text-transform: uppercase;
+  padding-left: 24px;
   @media screen and (min-width: $desktop) {
     padding: 0 20px 16px 24px;
-    border-bottom-left-radius: 20px;
+    // border-bottom-left-radius: 20px;
   }
 }
 .dev-number-text {

@@ -15,7 +15,6 @@
     font-size: 48px;
   }
 }
-
 .team-text {
   @include textFont;
   margin-bottom: 16px;
@@ -37,9 +36,13 @@
   @include flex;
   flex-direction: column;
   margin-top: 80px;
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     flex-direction: row;
     flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 30px;
+  }
+  @media screen and (min-width: $desktop) {
     column-gap: 102px;
     row-gap: 64px;
   }
@@ -49,11 +52,14 @@
   &:not(:last-child) {
     margin-bottom: 40px;
   }
-  @media screen and (min-width: $desktop) {
-    flex-basis: calc(33% - 68px);
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(50% - 25px);
     &:not(:last-child) {
       margin-bottom: 0;
     }
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(33% - 68px);
   }
 }
 .contributor-name {
