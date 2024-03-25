@@ -49,6 +49,7 @@
   background-color: $bgdColor;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  width: 100%;
   @include flex;
   flex-direction: column;
   @media screen and (min-width: $desktop) {
@@ -74,7 +75,6 @@
   padding-left: 24px;
   @media screen and (min-width: $desktop) {
     padding: 0 20px 16px 24px;
-    // border-bottom-left-radius: 20px;
   }
 }
 .dev-number-text {
@@ -83,9 +83,17 @@
   padding: 20px 24px 24px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  @media (min-width: $tablet)  and (max-width: #{$desktop - 1}) {
+    text-align: center;
+  }
   @media screen and (min-width: $desktop) {
     border-bottom-left-radius: 0;
     border-top-right-radius: 20px;
+  }
+}
+.showcase-image {
+  @media screen and (min-width: $desktop) {
+    flex-basis: 46%;
   }
 }
 .cases-list {

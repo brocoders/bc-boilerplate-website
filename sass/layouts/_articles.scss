@@ -45,7 +45,8 @@
 }
 .article-source {
   @include font($fs: 14px, $fw: 500, $lh: 2, $ls: 2px);
-  text-decoration: none;
+  display: inline;
+  text-decoration: none !important;
   text-transform: uppercase;
 }
 .fw-img {

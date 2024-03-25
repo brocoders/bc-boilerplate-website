@@ -37,21 +37,37 @@
     padding-right: $mobilePadding;
   }
   @media screen and (min-width: $desktop) {
-    @include flex;
+    // @include flex($jc: flex-end);
+    display: flex;
+    align-items: center;
+    column-gap: 70px;
 
     &:nth-child(odd) {
-      margin-left: $sidePadding;
+      padding-left: $sidePadding;
+      .demo-img {
+        object-position: 0 0;
+      }
     }
     &:nth-child(even) {
-      margin-right: $sidePadding;
+      padding-right: $sidePadding;
       flex-direction: row-reverse;
+      .demo-img {
+        object-position: 100%;
+      }
     }
   }
 }
 .demo-text {
   @include textFont;
   margin-bottom: 24px;
+  @media screen and (min-width: $desktop) {
+    flex-basis: 40%;
+  }
 }
 .demo-img {
-  max-height: 580px;
+  // max-height: 580px;
+  @media screen and (min-width: $desktop) {
+    height: 580px;
+    object-fit: cover;
+  }
 }

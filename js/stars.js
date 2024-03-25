@@ -15,9 +15,8 @@
       }
     })
     .catch((error) => {
-      console.error(
-        "Error fetching nestjs-boilerplate repository information:",
-        error
+      throw Error(
+        `Error fetching nestjs-boilerplate repository information: ${error}`
       );
     });
 
@@ -31,9 +30,8 @@
       }
     })
     .catch((error) => {
-      console.error(
-        "Error fetching extensive-react-boilerplate repository information:",
-        error
+      throw Error(
+        `Error fetching extensive-react-boilerplate repository information: ${error}`
       );
     });
 })();

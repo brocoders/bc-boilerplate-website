@@ -6,7 +6,7 @@ html {
 *::after {
   box-sizing: inherit;
   scroll-behavior: smooth;
-  // outline: red solid 1px;
+  overflow-x: hidden;
 }
 html,
 body,

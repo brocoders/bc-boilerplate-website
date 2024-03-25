@@ -9,7 +9,7 @@
     />
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
     <title>BCBoilerplate</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <meta itemprop="serviceType" content="Software development" />
   </head>
   <body>
@@ -66,7 +66,7 @@
       <section class="hero" itemscope itemtype="http://schema.org/WebPage">
         <div class="container">
           <h1 class="hero-title" itemprop="headline">
-            Start you project fast and polished with BC Boilerplates
+            Start you project fast and polished with BC&nbsp;Boilerplates
           </h1>
           <p class="hero-text" itemprop="description">
             BC Boilerplates make starting your frontend and backend projects a
@@ -79,6 +79,7 @@
           <a
             href="https://react-boilerplate-coral.vercel.app/en"
             class="hero-btn"
+            target="_blank"
             >Demo website</a
           >
         </div>
@@ -339,6 +340,7 @@
           <a
             href="https://react-boilerplate-coral.vercel.app/en"
             class="hero-btn"
+            target="_blank"
           >
             Demo website
           </a>
@@ -356,12 +358,22 @@
               The Sign In page enables login via email and password, or through
               social login options such as Google or Facebook.
             </p>
-            <img
-              class="demo-img"
-              src="./images/SignIn.png"
-              loading="lazy"
-              alt="screenshot of Sign In page"
-            />
+            <picture>
+              <source
+                srcset="./images/SignIn.webp 1x, ./images/SignIn@2x.webp 2x"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/SignIn.png 1x, ./images/SignIn@2x.png 2x"
+                type="image/png"
+              />
+              <img
+                src="./images/SignIn.png"
+                loading="lazy"
+                alt="screenshot of Sign In page"
+                class="demo-img"
+              />
+            </picture>
           </li>
           <li class="demo-item">
             <p class="demo-text">
@@ -371,12 +383,22 @@
               data. Furthermore, adding more fields to the Sign Up page for
               additional information is simple.
             </p>
-            <img
-              class="demo-img"
-              src="./images/SignUp.png"
-              loading="lazy"
-              alt="screenshot of Sign Up page"
-            />
+            <picture>
+              <source
+                srcset="./images/SignUp.webp 1x, ./images/SignUp@2x.webp 2x"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/SignUp.png 1x, ./images/SignUp@2x.png 2x"
+                type="image/png"
+              />
+              <img
+                class="demo-img"
+                src="./images/SignUp.png"
+                loading="lazy"
+                alt="screenshot of Sign Up page"
+              />
+            </picture>
           </li>
           <li class="demo-item">
             <p class="demo-text">
@@ -384,24 +406,50 @@
               assigned with an admin role can view, edit, and delete users from
               the list, and also have the option to manually create new users.
             </p>
-            <img
-              class="demo-img"
-              src="./images/Users.png"
-              loading="lazy"
-              alt="screenshot of Users page"
-            />
+            <picture>
+              <source
+                srcset="./images/Users.webp 1x, ./images/Users@2x.webp 2x"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/Users.png 1x, ./images/Users@2x.png 2x"
+                type="image/png"
+              />
+              <img
+                class="demo-img"
+                src="./images/Users.png"
+                loading="lazy"
+                alt="screenshot of Users page"
+              />
+            </picture>
           </li>
           <li class="demo-item">
             <p class="demo-text">
               Users can also view and edit their own profiles, including the
               ability to add or change their avatar.
             </p>
-            <img
-              class="demo-img"
-              src="./images/CreateUser.png"
-              loading="lazy"
-              alt="screenshot of Create User page"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/CreateUser.webp    1x,
+                  ./images/CreateUser@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/CreateUser.png    1x,
+                  ./images/CreateUser@2x.png 2x
+                "
+                type="image/png"
+              />
+              <img
+                class="demo-img"
+                src="./images/CreateUser.png"
+                loading="lazy"
+                alt="screenshot of Create User page"
+              />
+            </picture>
           </li>
         </ul>
       </section>
@@ -416,7 +464,7 @@
             </p>
             <div class="dev-number-box">
               <div class="dev-number-upper">
-                <p class="dev-number">> 500</p>
+                <p class="dev-number">&gt;&nbsp;500</p>
                 <p class="developers">developers</p>
               </div>
               <p class="dev-number-text">
@@ -424,7 +472,7 @@
               </p>
             </div>
           </div>
-          <picture>
+          <picture class="showcase-image">
             <source
               media="(prefers-color-scheme: dark)"
               srcset="
@@ -442,6 +490,7 @@
             <img
               alt="Star History Chart"
               src="https://api.star-history.com/svg?repos=brocoders/nestjs-boilerplate&type=Date"
+              loading="lazy"
             />
           </picture>
         </div>
@@ -458,7 +507,10 @@
               track key performance indicators according to the National Science
               Foundation.
             </p>
-            <a href="https://app.budget-mentor.com/" class="case-link"
+            <a
+              href="https://app.budget-mentor.com/"
+              class="case-link"
+              target="_blank"
               >app.budget-mentor.com</a
             >
           </li>
@@ -495,21 +547,25 @@
       </section>
       <section id="articles" class="container">
         <p class="articles-title">Recent articles</p>
-        <a href="https://dev.to/rodik/" class="btn-black">Subscribe</a>
+        <a href="https://dev.to/rodik/" class="btn-black" target="_blank"
+          >Subscribe</a
+        >
         <ul class="articles-list">
           <li class="article-item">
             <a
               class="article-link"
               href="https://dev.to/rodik/fast-project-start-with-nestjs-boilerplate-3992"
+              target="_blank"
             >
               Fast Project Start with NestJS Boilerplate
             </a>
             <a
               class="article-source"
               href="https://dev.to/rodik/fast-project-start-with-nestjs-boilerplate-3992"
+              target="_blank"
             >
-              on dev.to</a
-            >
+              on dev.to
+            </a>
             <svg width="20" height="20" aria-label="link to dev_to">
               <use href="./images/sprite.svg#dev_to"></use>
             </svg>
@@ -517,42 +573,63 @@
           <li class="article-item">
             <a
               class="article-link"
+              target="_blank"
               href="https://javascript.plainenglish.io/top-5-nestjs-boilerplates-to-start-a-new-project-faster-a2a2270ea600"
             >
               Top 5 NestJS Boilerplates to start a new project faster
-              <a class="article-source"> on Medium</a
-              ><svg width="20" height="20" aria-label="">
-                <use href="./images/sprite.svg#medium"></use>
-              </svg>
             </a>
+            <a
+              class="article-source"
+              target="_blank"
+              href="https://javascript.plainenglish.io/top-5-nestjs-boilerplates-to-start-a-new-project-faster-a2a2270ea600"
+            >
+              on Medium</a
+            >
+            <svg width="20" height="20" aria-label="">
+              <use href="./images/sprite.svg#medium"></use>
+            </svg>
           </li>
           <li class="article-item">
             <a
               class="article-link"
+              target="_blank"
               href="https://medium.com/front-end-weekly/mongodb-support-for-nestjs-boilerplate-with-hexagonal-architecture-2318e1ac3da5"
             >
               MongoDB support for NestJS Boilerplate with hexagonal architecture
-              <a class="article-source"> in Frontend Weekly</a>
-              <img
-                src="./images/fw.png"
-                alt="Frontend Weekly logo"
-                width="20"
-                height="20"
-                class="fw-img"
-              />
             </a>
+            <a
+              class="article-source"
+              target="_blank"
+              href="https://medium.com/front-end-weekly/mongodb-support-for-nestjs-boilerplate-with-hexagonal-architecture-2318e1ac3da5"
+            >
+              in Frontend Weekly</a
+            >
+            <img
+              src="./images/fw.png"
+              alt="Frontend Weekly logo"
+              width="20"
+              height="20"
+              class="fw-img"
+            />
           </li>
           <li class="article-item">
             <a
               class="article-link"
+              target="_blank"
               href="https://hackernoon.com/streamline-nestjs-setup-with-extensive-react-boilerplate"
             >
               Streamline NestJS Setup with Extensive React Boilerplate
-              <a class="article-source"> on Hackernoon</a>
-              <svg width="16" height="20" aria-label="">
-                <use href="./images/sprite.svg#hackernoon"></use>
-              </svg>
             </a>
+            <a
+              class="article-source"
+              target="_blank"
+              href="https://hackernoon.com/streamline-nestjs-setup-with-extensive-react-boilerplate"
+            >
+              on Hackernoon
+            </a>
+            <svg width="16" height="20" aria-label="">
+              <use href="./images/sprite.svg#hackernoon"></use>
+            </svg>
           </li>
         </ul>
       </section>
@@ -575,12 +652,30 @@
             itemscope
             itemtype="https://schema.org/Person"
           >
-            <img
-              src="./images/Vlad.png"
-              alt="Vlad's picture"
-              loading="lazy"
-              itemprop="image"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/Vlad.webp    1x,
+                  ./images/Vlad@2x.webp 2x,
+                  ./images/Vlad@3x.webp 3x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/Vlad.png    1x,
+                  ./images/Vlad@2x.png 2x,
+                  ./images/Vlad@3x.png 3x
+                "
+                type="image/png"
+              />
+              <img
+                src="./images/Vlad.png"
+                alt="Vlad's picture"
+                loading="lazy"
+                itemprop="image"
+              />
+            </picture>
             <p class="contributor-name" itemprop="name">Vlad Shchepotin</p>
             <p class="position" itemprop="jobTitle">Lead developer</p>
           </li>
@@ -589,12 +684,31 @@
             itemscope
             itemtype="https://schema.org/Person"
           >
-            <img
-              src="./images/Sergei.png"
-              alt="Sergei's picture"
-              loading="lazy"
-              itemprop="image"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/Sergei.webp    1x,
+                  ./images/Sergei@2x.webp 2x,
+                  ./images/Sergei@3x.webp 3x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/Sergei.png    1x,
+                  ./images/Sergei@2x.png 2x,
+                  ./images/Sergei@3x.png 3x
+                "
+                type="image/png"
+              />
+              <img
+                src="./images/Sergei.png"
+                alt="Sergei's picture"
+                loading="lazy"
+                itemprop="image"
+              />
+            </picture>
+
             <p class="contributor-name" itemprop="name">Sergei Lomako</p>
             <p class="position" itemprop="jobTitle">Backend developer</p>
           </li>
@@ -603,12 +717,31 @@
             itemscope
             itemtype="https://schema.org/Person"
           >
-            <img
-              src="./images/Olena.png"
-              alt="Olena's picture"
-              loading="lazy"
-              itemprop="image"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/Olena.webp    1x,
+                  ./images/Olena@2x.webp 2x,
+                  ./images/Olena@3x.webp 3x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/Olena.png    1x,
+                  ./images/Olena@2x.png 2x,
+                  ./images/Olena@3x.png 3x
+                "
+                type="image/png"
+              />
+              <img
+                src="./images/Olena.png"
+                alt="Olena's picture"
+                loading="lazy"
+                itemprop="image"
+              />
+            </picture>
+
             <p class="contributor-name" itemprop="name">Olena Vlasenko</p>
             <p class="position" itemprop="jobTitle">Frontend developer</p>
           </li>
@@ -617,12 +750,30 @@
             itemscope
             itemtype="https://schema.org/Person"
           >
-            <img
-              src="./images/Tanya.png"
-              alt="Tetiana's picture"
-              loading="lazy"
-              itemprop="image"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/Tanya.webp    1x,
+                  ./images/Tanya@2x.webp 2x,
+                  ./images/Tanya@3x.webp 3x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/Tanya.png    1x,
+                  ./images/Tanya@2x.png 2x,
+                  ./images/Tanya@3x.png 3x
+                "
+                type="image/png"
+              />
+              <img
+                src="./images/Tanya.png"
+                alt="Tetiana's picture"
+                loading="lazy"
+                itemprop="image"
+              />
+            </picture>
             <p class="contributor-name" itemprop="name">Tetiana Fomina</p>
             <p class="position" itemprop="jobTitle">QA and TA</p>
           </li>
@@ -631,12 +782,30 @@
             itemscope
             itemtype="https://schema.org/Person"
           >
-            <img
-              src="./images/Luda.png"
-              alt="Liudmyla's picture"
-              loading="lazy"
-              itemprop="image"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/Luda.webp    1x,
+                  ./images/Luda@2x.webp 2x,
+                  ./images/Luda@3x.webp 3x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/Luda.png    1x,
+                  ./images/Luda@2x.png 2x,
+                  ./images/Luda@3x.png 3x
+                "
+                type="image/png"
+              />
+              <img
+                src="./images/Luda.png"
+                alt="Liudmyla's picture"
+                loading="lazy"
+                itemprop="image"
+              />
+            </picture>
             <p class="contributor-name" itemprop="name">Liudmyla Kostenko</p>
             <p class="position" itemprop="jobTitle">Frontend developer</p>
           </li>
@@ -645,12 +814,30 @@
             itemscope
             itemtype="https://schema.org/Person"
           >
-            <img
-              src="./images/Rodion.png"
-              alt="Rodion's picture"
-              loading="lazy"
-              itemprop="image"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/Rodion.webp    1x,
+                  ./images/Rodion@2x.webp 2x,
+                  ./images/Rodion@3x.webp 3x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/Rodion.png    1x,
+                  ./images/Rodion@2x.png 2x,
+                  ./images/Rodion@3x.png 3x
+                "
+                type="image/png"
+              />
+              <img
+                src="./images/Rodion.png"
+                alt="Rodion's picture"
+                loading="lazy"
+                itemprop="image"
+              />
+            </picture>
             <p class="contributor-name" itemprop="name">Rodion Salnik</p>
             <p class="position" itemprop="jobTitle">Promotion & bussines</p>
           </li>
@@ -679,6 +866,7 @@
           <li class="contacts-item">
             <a
               href="https://discord.com/channels/520622812742811698/1197293125434093701"
+              target="_blank"
             >
               <svg width="21" height="16">
                 <use href="./images/sprite.svg#discord-light"></use>
@@ -721,6 +909,7 @@
         <li class="footer-link">
           <a
             href="https://discord.com/channels/520622812742811698/1197293125434093701"
+            target="_blank"
           >
             <svg width="26" height="20">
               <use href="./images/sprite.svg#discord-black"></use>
@@ -741,10 +930,15 @@
           </a>
         </li>
         <li class="footer-link">
-          <a href="https://react-boilerplate-coral.vercel.app/en"> Demo</a>
+          <a
+            href="https://react-boilerplate-coral.vercel.app/en"
+            target="_blank"
+          >
+            Demo</a
+          >
         </li>
         <li class="footer-link">
-          <a href="https://dev.to/rodik/">
+          <a href="https://dev.to/rodik/" target="_blank">
             <svg width="20" height="20" aria-label="">
               <use href="./images/sprite.svg#dev_to"></use>
             </svg>

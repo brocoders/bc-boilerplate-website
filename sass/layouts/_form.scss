@@ -1,7 +1,6 @@
 .form-section {
   @extend %container;
   background-color: $blackBackground;
-  background-image: url("../images/form-bg-mob.png");
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,28 +11,81 @@
   padding-top: 169px;
   padding-bottom: 169px;
 
-  @media (min-width: $desktop) and (-webkit-max-device-pixel-ratio: 3) {
-    background-image: url("../images/form-bg@3x.png");
+  @media (max-width: #{$tablet - 1}) {
+    background-image: url("../images/mobForm@1x.jpg");
+    background-image: -webkit-image-set(
+      url("../images/mobForm@1x.webp"),
+      url("../images/mobForm@1x.jpg")
+    );
+    background-image: image-set(
+      url("../images/mobForm@1x.webp") type("image/webp") 1x,
+      url("../images/mobForm@1x.jpg") type("image/jpeg") 1x
+    );
   }
-  @media (min-width: $desktop) and (min-device-pixel-ratio: 2) {
-    background-image: url("../images/form-bg@2x.png");
+  @media (min-width: $tablet) and (max-width: #{$desktop - 1}) {
+    background-image: url("../images/mobForm@1x.jpg");
+    background-image: -webkit-image-set(
+      url("../images/mobForm@1x.webp") 1x,
+      url("../images/mobForm@1x.jpg") 1x,
+      url("../images/mobForm@2x.webp") 2x,
+      url("../images/mobForm@2x.jpg") 2x
+    );
+    background-image: image-set(
+      url("../images/mobForm@1x.webp") type("image/webp") 1x,
+      url("../images/mobForm@2x.webp") type("image/webp") 2x,
+      url("../images/mobForm@1x.jpg") type("image/jpeg") 1x,
+      url("../images/mobForm@2x.jpg") type("image/jpeg") 2x
+    );
   }
 
   @media screen and (min-width: $desktop) {
-    background-image: url("../images/form-bg@1x.png");
     padding-top: 85px;
     padding-bottom: 85px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     column-gap: 50px;
+
+    background-image: url("../images/form@1x.jpg");
+    background-image: -webkit-image-set(
+      url("../images/form@1x.webp") 1x,
+      url("../images/form@2x.webp") 2x,
+      url("../images/form@3x.webp") 3x,
+      url("../images/form@1x.jpg") 1x,
+      url("../images/form@2x.jpg") 2x,
+      url("../images/form@3x.jpg") 3x
+    );
+    background-image: image-set(
+      url("../images/form@1x.webp") type("image/webp") 1x,
+      url("../images/form@2x.webp") type("image/webp") 2x,
+      url("../images/form@3x.webp") type("image/webp") 3x,
+      url("../images/form@1x.jpg") type("image/jpeg") 1x,
+      url("../images/form@2x.jpg") type("image/jpeg") 2x,
+      url("../images/form@3x.jpg") type("image/jpeg") 3x
+    );
   }
 
   @media screen and (min-width: 1350px) {
     justify-content: flex-start;
     column-gap: 100px;
   }
+  @media screen and (min-width: $wide) {
+    background-image: url("../images/form@1x.jpg");
+    background-image: -webkit-image-set(
+      url("../images/form@2x.webp") 1x,
+      url("../images/form@3x.webp") 2x,
+      url("../images/form@2x.jpg") 1x,
+      url("../images/form@3x.jpg") 2x
+    );
+    background-image: image-set(
+      url("../images/form@2x.webp") type("image/webp") 1x,
+      url("../images/form@3x.webp") type("image/webp") 2x,
+      url("../images/form@2x.jpg") type("image/jpeg") 1x,
+      url("../images/form@3x.jpg") type("image/jpeg") 2x
+    );
+  }
 }
+
 .form-title {
   @include subTitleFont($fs: 48px, $lh: 1.17, $cl: #fff, $ls: -1px);
   margin-bottom: 72px;

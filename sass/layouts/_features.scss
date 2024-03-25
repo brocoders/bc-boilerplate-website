@@ -109,11 +109,11 @@
 .comparison-list {
   padding-left: 15px;
   padding-bottom: 32px;
-  // border-bottom: 1px solid $lightTextColor;
 }
 .comparison-item {
   list-style-type: disc;
   list-style-position: outside;
+  overflow-x: visible;
   @include font(
     $fw: 500,
     $fs: 16px,
