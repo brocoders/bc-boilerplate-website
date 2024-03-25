@@ -2,6 +2,7 @@
   @extend %container;
   padding-top: 48px;
   padding-bottom: 64px;
+  scroll-behavior: smooth;
 }
 .team-description {
   @media screen and (min-width: $desktop) {

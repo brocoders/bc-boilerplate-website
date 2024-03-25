@@ -1,5 +1,6 @@
 #showcase {
   margin-top: 48px;
+  scroll-behavior: smooth;
 }
 .showcase-stars {
   @include flex;

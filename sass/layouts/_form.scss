@@ -12,14 +12,10 @@
   padding-top: 169px;
   padding-bottom: 169px;
 
-  @media (min-width: $desktop) and (-webkit-max-device-pixel-ratio: 3),
-    (min-resolution: 340dpi) {
+  @media (min-width: $desktop) and (-webkit-max-device-pixel-ratio: 3) {
     background-image: url("../images/form-bg@3x.png");
   }
-  @media (min-width: $desktop) and (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  @media (min-width: $desktop) and (min-device-pixel-ratio: 2) {
     background-image: url("../images/form-bg@2x.png");
   }
 

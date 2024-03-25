@@ -23,6 +23,11 @@
       width: 200px;
     }
   }
+  @media screen and (min-width: $wide) {
+    .container {
+      width: 50%;
+    }
+  }
 }
 .hero-title {
   @include titleFont($cl: #fff);

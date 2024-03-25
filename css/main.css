@@ -47,6 +47,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -424,6 +425,11 @@ img {
     width: 200px;
   }
 }
+@media screen and (min-width: 2460px) {
+  .hero .container {
+    width: 50%;
+  }
+}
 
 .hero-title {
   font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
@@ -489,6 +495,11 @@ img {
 @media (min-width: 1200px) {
   .feature:not(:last-child) {
     margin-right: 81px;
+  }
+}
+@media screen and (min-width: 2460px) {
+  .feature:not(:last-child) {
+    margin-right: 200px;
   }
 }
 
@@ -567,7 +578,7 @@ img {
     align-items: flex-start;
     justify-content: flex-start;
   }
-  .frontend .comparison-buttons {
+  .frontend .comparison-footer {
     margin-top: auto;
   }
 }
@@ -601,6 +612,7 @@ img {
   font-weight: 400;
   color: #2e384d;
   margin-bottom: 24px;
+  max-width: 850px;
 }
 
 .git-stars {
@@ -623,7 +635,6 @@ img {
 .comparison-list {
   padding-left: 15px;
   padding-bottom: 32px;
-  border-bottom: 1px solid #afb2b8;
 }
 
 .comparison-item {
@@ -663,6 +674,11 @@ img {
   column-gap: 12px;
 }
 
+.comparison-footer {
+  width: 100%;
+  border-top: 1px solid #afb2b8;
+}
+
 .form-section {
   background-color: #10133c;
   background-image: url("../images/form-bg-mob.png");
@@ -676,12 +692,12 @@ img {
   padding-top: 169px;
   padding-bottom: 169px;
 }
-@media (min-width: 1200px) and (-webkit-max-device-pixel-ratio: 3), (min-resolution: 340dpi) {
+@media (min-width: 1200px) and (-webkit-max-device-pixel-ratio: 3) {
   .form-section {
     background-image: url("../images/form-bg@3x.png");
   }
 }
-@media (min-width: 1200px) and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-width: 1200px) and (min-device-pixel-ratio: 2) {
   .form-section {
     background-image: url("../images/form-bg@2x.png");
   }
@@ -730,6 +746,7 @@ img {
 
 #features {
   background-color: #fafafa;
+  scroll-behavior: smooth;
 }
 
 .demo-header {
@@ -816,6 +833,7 @@ img {
 
 #showcase {
   margin-top: 48px;
+  scroll-behavior: smooth;
 }
 
 .showcase-stars {
@@ -1022,6 +1040,7 @@ img {
 #team {
   padding-top: 48px;
   padding-bottom: 64px;
+  scroll-behavior: smooth;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1136,6 +1155,7 @@ img {
   background-color: #000;
   padding-top: 64px;
   padding-bottom: 96px;
+  scroll-behavior: smooth;
 }
 #contacts a {
   font-family: "Manrope Bold", sans-serif;
@@ -1250,6 +1270,7 @@ img {
   background-color: #fafafa;
   padding-top: 48px;
   padding-bottom: 64px;
+  scroll-behavior: smooth;
   position: relative;
 }
 @media screen and (min-width: 1200px) {

@@ -10,14 +10,19 @@
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
     <title>BCBoilerplate</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <meta itemprop="serviceType" content="Software development" />
   </head>
   <body>
-    <header class="container header-container">
-      <a href="./index.html" class="logo-header">
-        <svg width="26" height="36" aria-label="site logo">
+    <header
+      class="container header-container"
+      itemscope
+      itemtype="http://schema.org/WebPage"
+    >
+      <a href="./index.html" class="logo-header" itemprop="url">
+        <svg width="26" height="36" aria-label="site logo" itemprop="logo">
           <use href="./images/sprite.svg#BroLogo"></use>
         </svg>
-        BC Boilerplates
+        <span itemprop="name">BC Boilerplates</span>
       </a>
       <button
         type="button"
@@ -58,12 +63,12 @@
       </nav>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero" itemscope itemtype="http://schema.org/WebPage">
         <div class="container">
-          <h1 class="hero-title">
+          <h1 class="hero-title" itemprop="headline">
             Start you project fast and polished with BC Boilerplates
           </h1>
-          <p class="hero-text">
+          <p class="hero-text" itemprop="description">
             BC Boilerplates make starting your frontend and backend projects a
             breeze. They come packed with essential features and top-notch
             development practices, saving you time on tasks like authentication,
@@ -80,7 +85,7 @@
       </section>
       <section>
         <ul class="feature-list">
-          <li class="feature">
+          <li class="feature" itemtype="http://schema.org/Service">
             <svg
               width="80"
               height="80"
@@ -127,12 +132,14 @@
           </li>
         </ul>
         <ul class="comparison">
-          <li class="frontend">
+          <li class="frontend" itemscope itemtype="http://schema.org/Service">
             <svg width="81" height="40" aria-label="">
               <use href="./images/sprite.svg#frontend"></use>
             </svg>
-            <h2 class="comparison-title">Extensive React Boilerplate</h2>
-            <p class="comparison-text">
+            <h2 class="comparison-title" itemprop="serviceType">
+              Extensive React Boilerplate
+            </h2>
+            <p class="comparison-text" itemprop="description">
               Extentensive React Boilerplate is based on React and Next.js, that
               allows to build performant web apps with server-side rendering
               support
@@ -196,26 +203,30 @@
                 <span>CI (GitHub Actions) </span> + Saving 5 hrs
               </li>
             </ul>
-            <p class="total">Total <span> 193 hrs saving</span></p>
-            <div class="comparison-buttons">
-              <a
-                href="https://github.com/brocoders/extensive-react-boilerplate"
-                class="btn-black"
-                >Github Repo</a
-              >
-              <a
-                href="https://github.com/new?template_name=extensive-react-boilerplate&template_owner=brocoders"
-                class="btn-white"
-                >Use Template</a
-              >
+            <div class="comparison-footer">
+              <p class="total">Total <span> 193 hrs saving</span></p>
+              <div class="comparison-buttons">
+                <a
+                  href="https://github.com/brocoders/extensive-react-boilerplate"
+                  class="btn-black"
+                  >Github Repo</a
+                >
+                <a
+                  href="https://github.com/new?template_name=extensive-react-boilerplate&template_owner=brocoders"
+                  class="btn-white"
+                  >Use Template</a
+                >
+              </div>
             </div>
           </li>
-          <li class="backend">
+          <li class="backend" itemscope itemtype="http://schema.org/Service">
             <svg width="72" height="40" aria-label="">
               <use href="./images/sprite.svg#backend"></use>
             </svg>
-            <h2 class="comparison-title">Nest.js Boilerplate</h2>
-            <p class="comparison-text">
+            <h2 class="comparison-title" itemprop="serviceType">
+              Nest.js Boilerplate
+            </h2>
+            <p class="comparison-text" itemprop="description">
               RESTfull API Boilerplate is based on Nest.js and implements basic
               features and best practices on the backend.
             </p>
@@ -223,7 +234,7 @@
               <svg width="20" height="20" aria-label="">
                 <use href="./images/sprite.svg#star"></use>
               </svg>
-              <span data-backend-stars></span>
+              <span class="git-text" data-backend-stars></span>
               <svg width="24" height="24" aria-label="">
                 <use href="./images/sprite.svg#github"></use>
               </svg>
@@ -287,18 +298,20 @@
                 <span> Auto updating dependencies </span> + Saving 4 hrs
               </li>
             </ul>
-            <p class="total">Total <span>126 hrs saving</span></p>
-            <div class="comparison-buttons">
-              <a
-                href="https://github.com/brocoders/nestjs-boilerplate"
-                class="btn-black"
-                >Github Repo</a
-              >
-              <a
-                href="https://github.com/new?template_name=nestjs-boilerplate&template_owner=brocoders"
-                class="btn-white"
-                >Use Template</a
-              >
+            <div class="comparison-footer">
+              <p class="total">Total <span>126 hrs saving</span></p>
+              <div class="comparison-buttons">
+                <a
+                  href="https://github.com/brocoders/nestjs-boilerplate"
+                  class="btn-black"
+                  >Github Repo</a
+                >
+                <a
+                  href="https://github.com/new?template_name=nestjs-boilerplate&template_owner=brocoders"
+                  class="btn-white"
+                  >Use Template</a
+                >
+              </div>
             </div>
           </li>
         </ul>
@@ -552,60 +565,94 @@
             <a href="#contacts">reach out to our company</a> for assistance or
             inquiries.
           </p>
-          <svg width="234" height="58" class="bro-logo">
+          <svg width="234" height="58" class="bro-logo" itemprop="logo">
             <use href="./images/sprite.svg#bro-with-name"></use>
           </svg>
         </div>
         <ul class="contributors-list">
-          <li class="contributor-item">
-            <img src="./images/Vlad.png" alt="Vlad's picture" loading="lazy" />
-            <p class="contributor-name">Vlad Shchepotin</p>
-            <p class="position">Lead developer</p>
+          <li
+            class="contributor-item"
+            itemscope
+            itemtype="https://schema.org/Person"
+          >
+            <img
+              src="./images/Vlad.png"
+              alt="Vlad's picture"
+              loading="lazy"
+              itemprop="image"
+            />
+            <p class="contributor-name" itemprop="name">Vlad Shchepotin</p>
+            <p class="position" itemprop="jobTitle">Lead developer</p>
           </li>
-          <li class="contributor-item">
+          <li
+            class="contributor-item"
+            itemscope
+            itemtype="https://schema.org/Person"
+          >
             <img
               src="./images/Sergei.png"
               alt="Sergei's picture"
               loading="lazy"
+              itemprop="image"
             />
-            <p class="contributor-name">Sergei Lomako</p>
-            <p class="position">Backend developer</p>
+            <p class="contributor-name" itemprop="name">Sergei Lomako</p>
+            <p class="position" itemprop="jobTitle">Backend developer</p>
           </li>
-          <li class="contributor-item">
+          <li
+            class="contributor-item"
+            itemscope
+            itemtype="https://schema.org/Person"
+          >
             <img
               src="./images/Olena.png"
               alt="Olena's picture"
               loading="lazy"
+              itemprop="image"
             />
-            <p class="contributor-name">Olena Vlasenko</p>
-            <p class="position">Frontend developer</p>
+            <p class="contributor-name" itemprop="name">Olena Vlasenko</p>
+            <p class="position" itemprop="jobTitle">Frontend developer</p>
           </li>
-          <li class="contributor-item">
+          <li
+            class="contributor-item"
+            itemscope
+            itemtype="https://schema.org/Person"
+          >
             <img
               src="./images/Tanya.png"
               alt="Tetiana's picture"
               loading="lazy"
+              itemprop="image"
             />
-            <p class="contributor-name">Tetiana Fomina</p>
-            <p class="position">QA and TA</p>
+            <p class="contributor-name" itemprop="name">Tetiana Fomina</p>
+            <p class="position" itemprop="jobTitle">QA and TA</p>
           </li>
-          <li class="contributor-item">
+          <li
+            class="contributor-item"
+            itemscope
+            itemtype="https://schema.org/Person"
+          >
             <img
               src="./images/Luda.png"
               alt="Liudmyla's picture"
               loading="lazy"
+              itemprop="image"
             />
-            <p class="contributor-name">Liudmyla Kostenko</p>
-            <p class="position">Frontend developer</p>
+            <p class="contributor-name" itemprop="name">Liudmyla Kostenko</p>
+            <p class="position" itemprop="jobTitle">Frontend developer</p>
           </li>
-          <li class="contributor-item">
+          <li
+            class="contributor-item"
+            itemscope
+            itemtype="https://schema.org/Person"
+          >
             <img
               src="./images/Rodion.png"
               alt="Rodion's picture"
               loading="lazy"
+              itemprop="image"
             />
-            <p class="contributor-name">Rodion Salnik</p>
-            <p class="position">Promotion & bussines</p>
+            <p class="contributor-name" itemprop="name">Rodion Salnik</p>
+            <p class="position" itemprop="jobTitle">Promotion & bussines</p>
           </li>
         </ul>
       </section>
@@ -618,7 +665,11 @@
         </p>
         <ul class="contacts-list">
           <li class="contacts-item">
-            <a href="mailto:boilerplates@brocoders.com">
+            <a
+              href="mailto:boilerplates@brocoders.com"
+              itemscope
+              itemprop="email"
+            >
               <svg width="20" height="14">
                 <use href="./images/sprite.svg#message"></use>
               </svg>
@@ -636,7 +687,12 @@
             >
           </li>
           <li class="contacts-item">
-            <p class="git-contacts">
+            <p
+              class="git-contacts"
+              itemprop="publisher"
+              itemscope
+              itemtype="http://schema.org/Organization"
+            >
               <span>
                 <svg width="24" height="24">
                   <use href="./images/sprite.svg#github_white"></use>
@@ -645,11 +701,13 @@
               </span>
               <a
                 href="https://github.com/brocoders/extensive-react-boilerplate/discussions"
+                itemprop="url"
               >
                 Frontend
               </a>
               <a
                 href="https://github.com/brocoders/nestjs-boilerplate/discussions"
+                itemprop="url"
               >
                 Backend
               </a>
@@ -658,7 +716,7 @@
         </ul>
       </section>
     </main>
-    <footer>
+    <footer itemscope itemtype="http://schema.org/WebPage">
       <ul class="footer-list">
         <li class="footer-link">
           <a
@@ -702,6 +760,13 @@
           </a>
         </li>
       </ul>
+      <span
+        itemprop="copyrightHolder"
+        itemscope
+        itemtype="http://schema.org/Organization"
+      >
+        <meta itemprop="name" content="Brocoders" />
+      </span>
     </footer>
 
     <script src="./js/menu.js"></script>

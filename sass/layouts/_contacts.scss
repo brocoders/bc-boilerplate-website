@@ -2,6 +2,7 @@
   background-color: #000;
   padding-top: 64px;
   padding-bottom: 96px;
+  scroll-behavior: smooth;
 
   a {
     @include subTitleFont($fs: 18px, $lh: 1.33, $ls: -0.6px, $cl: #fff);
