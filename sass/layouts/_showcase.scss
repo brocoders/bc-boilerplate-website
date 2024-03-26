@@ -58,13 +58,10 @@
   }
 }
 .dev-number {
-  // background-color: $bgdColor;
   @include titleFont($fs: 64px, $lh: 1.15);
   padding: 24px 24px 0;
-  // border-top-left-radius: 20px;
-  // border-top-right-radius: 20px;
+  overflow-x: visible;
   @media screen and (min-width: $desktop) {
-    // border-top-right-radius: 0;
     padding: 16px 20px 0 24px;
   }
 }

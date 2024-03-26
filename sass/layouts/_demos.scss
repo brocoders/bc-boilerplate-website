@@ -37,7 +37,6 @@
     padding-right: $mobilePadding;
   }
   @media screen and (min-width: $desktop) {
-    // @include flex($jc: flex-end);
     display: flex;
     align-items: center;
     column-gap: 70px;
@@ -65,7 +64,6 @@
   }
 }
 .demo-img {
-  // max-height: 580px;
   @media screen and (min-width: $desktop) {
     height: 580px;
     object-fit: cover;

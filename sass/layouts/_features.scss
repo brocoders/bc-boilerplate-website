@@ -55,6 +55,7 @@
   @media (max-width: #{$desktop - 1}) {
     padding-left: $mobilePadding;
     padding-right: $mobilePadding;
+    overflow-x: visible;
   }
 
   @media screen and (min-width: $desktop) {
@@ -109,6 +110,7 @@
 .comparison-list {
   padding-left: 15px;
   padding-bottom: 32px;
+  overflow-x: visible;
 }
 .comparison-item {
   list-style-type: disc;

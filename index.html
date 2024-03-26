@@ -11,18 +11,82 @@
     <title>BCBoilerplate</title>
     <link rel="stylesheet" href="./css/main.min.css" />
     <meta itemprop="serviceType" content="Software development" />
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "BCBoilerplate",
+        "description": "Boilerplates to start you project fast and polished",
+        "url": "https://bcboilerplates.com/",
+        "provider": {
+          "@type": "Organization",
+          "name": "Brocoders"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Brocoders"
+        },
+        "applicationSuite": ["React", "Next.js", "Nest JS"],
+        "featureList": ["Public and private routing", "Social Login"],
+        "screenshot": [
+          "https://bcboilerplates.com/images/SignIn.png",
+          "https://bcboilerplates.com/images/SignUp.png",
+          "https://bcboilerplates.com/images/Users.png",
+          "https://bcboilerplates.com/images/CreateUser.png"
+        ],
+        "softwareRequirements": ["node", "react"],
+        "installUrl": [
+          "https://github.com/new?template_name=extensive-react-boilerplate&template_owner=brocoders",
+          "https://github.com/new?template_name=nestjs-boilerplate&template_owner=brocoders"
+        ],
+        "creator": [
+          {
+            "@type": "Person",
+            "name": "Vlad Shchepotin",
+            "jobTitle": "Lead developer",
+            "image": "https://bcboilerplates.com/images/Vlad.png"
+          },
+          {
+            "@type": "Person",
+            "name": "Sergei Lomako",
+            "jobTitle": "Backend developer",
+            "image": "https://bcboilerplates.com/images/Sergei.png"
+          },
+          {
+            "@type": "Person",
+            "name": "Olena Vlasenko",
+            "jobTitle": "Frontend developer",
+            "image": "https://bcboilerplates.com/images/Olena.png"
+          },
+          {
+            "@type": "Person",
+            "name": "Tetiana Fomina",
+            "jobTitle": "QA and TA",
+            "image": "https://bcboilerplates.com/images/Tanya.png"
+          },
+          {
+            "@type": "Person",
+            "name": "Liudmyla Kostenko",
+            "jobTitle": "Frontend developer",
+            "image": "https://bcboilerplates.com/images/Luda.png"
+          },
+          {
+            "@type": "Person",
+            "name": "Rodion Salnik",
+            "jobTitle": "Promotion & bussines",
+            "image": "https://bcboilerplates.com/images/Rodion.png"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <header
-      class="container header-container"
-      itemscope
-      itemtype="http://schema.org/WebPage"
-    >
-      <a href="./index.html" class="logo-header" itemprop="url">
-        <svg width="26" height="36" aria-label="site logo" itemprop="logo">
+    <header class="container header-container">
+      <a href="./index.html" class="logo-header">
+        <svg width="26" height="36" aria-label="site logo">
           <use href="./images/sprite.svg#BroLogo"></use>
         </svg>
-        <span itemprop="name">BC Boilerplates</span>
+        <span class="name">BC Boilerplates</span>
       </a>
       <button
         type="button"
@@ -42,7 +106,7 @@
           ></use>
         </svg>
       </button>
-      <nav class="menu" id="menu-container" data-menu role="navigation">
+      <nav class="menu" id="menu-container" data-menu>
         <ul class="site-nav">
           <li class="site-nav__item">
             <a href="#features" class="site-nav__link">Features</a>
@@ -63,12 +127,12 @@
       </nav>
     </header>
     <main>
-      <section class="hero" itemscope itemtype="http://schema.org/WebPage">
+      <section class="hero">
         <div class="container">
-          <h1 class="hero-title" itemprop="headline">
+          <h1 class="hero-title">
             Start you project fast and polished with BC&nbsp;Boilerplates
           </h1>
-          <p class="hero-text" itemprop="description">
+          <p class="hero-text">
             BC Boilerplates make starting your frontend and backend projects a
             breeze. They come packed with essential features and top-notch
             development practices, saving you time on tasks like authentication,
@@ -86,7 +150,7 @@
       </section>
       <section>
         <ul class="feature-list">
-          <li class="feature" itemtype="http://schema.org/Service">
+          <li class="feature">
             <svg
               width="80"
               height="80"
@@ -133,14 +197,12 @@
           </li>
         </ul>
         <ul class="comparison">
-          <li class="frontend" itemscope itemtype="http://schema.org/Service">
+          <li class="frontend">
             <svg width="81" height="40" aria-label="">
               <use href="./images/sprite.svg#frontend"></use>
             </svg>
-            <h2 class="comparison-title" itemprop="serviceType">
-              Extensive React Boilerplate
-            </h2>
-            <p class="comparison-text" itemprop="description">
+            <h2 class="comparison-title">Extensive React Boilerplate</h2>
+            <p class="comparison-text">
               Extentensive React Boilerplate is based on React and Next.js, that
               allows to build performant web apps with server-side rendering
               support
@@ -220,14 +282,12 @@
               </div>
             </div>
           </li>
-          <li class="backend" itemscope itemtype="http://schema.org/Service">
+          <li class="backend">
             <svg width="72" height="40" aria-label="">
               <use href="./images/sprite.svg#backend"></use>
             </svg>
-            <h2 class="comparison-title" itemprop="serviceType">
-              Nest.js Boilerplate
-            </h2>
-            <p class="comparison-text" itemprop="description">
+            <h2 class="comparison-title">Nest.js Boilerplate</h2>
+            <p class="comparison-text">
               RESTfull API Boilerplate is based on Nest.js and implements basic
               features and best practices on the backend.
             </p>
@@ -642,16 +702,12 @@
             <a href="#contacts">reach out to our company</a> for assistance or
             inquiries.
           </p>
-          <svg width="234" height="58" class="bro-logo" itemprop="logo">
+          <svg width="234" height="58" class="bro-logo">
             <use href="./images/sprite.svg#bro-with-name"></use>
           </svg>
         </div>
         <ul class="contributors-list">
-          <li
-            class="contributor-item"
-            itemscope
-            itemtype="https://schema.org/Person"
-          >
+          <li class="contributor-item">
             <picture>
               <source
                 srcset="
@@ -673,17 +729,13 @@
                 src="./images/Vlad.png"
                 alt="Vlad's picture"
                 loading="lazy"
-                itemprop="image"
+                class="contributor-image"
               />
             </picture>
-            <p class="contributor-name" itemprop="name">Vlad Shchepotin</p>
-            <p class="position" itemprop="jobTitle">Lead developer</p>
+            <p class="contributor-name">Vlad Shchepotin</p>
+            <p class="position">Lead developer</p>
           </li>
-          <li
-            class="contributor-item"
-            itemscope
-            itemtype="https://schema.org/Person"
-          >
+          <li class="contributor-item">
             <picture>
               <source
                 srcset="
@@ -705,18 +757,14 @@
                 src="./images/Sergei.png"
                 alt="Sergei's picture"
                 loading="lazy"
-                itemprop="image"
+                class="contributor-image"
               />
             </picture>
 
-            <p class="contributor-name" itemprop="name">Sergei Lomako</p>
-            <p class="position" itemprop="jobTitle">Backend developer</p>
+            <p class="contributor-name">Sergei Lomako</p>
+            <p class="position">Backend developer</p>
           </li>
-          <li
-            class="contributor-item"
-            itemscope
-            itemtype="https://schema.org/Person"
-          >
+          <li class="contributor-item">
             <picture>
               <source
                 srcset="
@@ -738,18 +786,14 @@
                 src="./images/Olena.png"
                 alt="Olena's picture"
                 loading="lazy"
-                itemprop="image"
+                class="contributor-image"
               />
             </picture>
 
-            <p class="contributor-name" itemprop="name">Olena Vlasenko</p>
-            <p class="position" itemprop="jobTitle">Frontend developer</p>
+            <p class="contributor-name">Olena Vlasenko</p>
+            <p class="position">Frontend developer</p>
           </li>
-          <li
-            class="contributor-item"
-            itemscope
-            itemtype="https://schema.org/Person"
-          >
+          <li class="contributor-item">
             <picture>
               <source
                 srcset="
@@ -771,17 +815,13 @@
                 src="./images/Tanya.png"
                 alt="Tetiana's picture"
                 loading="lazy"
-                itemprop="image"
+                class="contributor-image"
               />
             </picture>
-            <p class="contributor-name" itemprop="name">Tetiana Fomina</p>
-            <p class="position" itemprop="jobTitle">QA and TA</p>
+            <p class="contributor-name">Tetiana Fomina</p>
+            <p class="position">QA and TA</p>
           </li>
-          <li
-            class="contributor-item"
-            itemscope
-            itemtype="https://schema.org/Person"
-          >
+          <li class="contributor-item">
             <picture>
               <source
                 srcset="
@@ -803,17 +843,13 @@
                 src="./images/Luda.png"
                 alt="Liudmyla's picture"
                 loading="lazy"
-                itemprop="image"
+                class="contributor-image"
               />
             </picture>
-            <p class="contributor-name" itemprop="name">Liudmyla Kostenko</p>
-            <p class="position" itemprop="jobTitle">Frontend developer</p>
+            <p class="contributor-name">Liudmyla Kostenko</p>
+            <p class="position">Frontend developer</p>
           </li>
-          <li
-            class="contributor-item"
-            itemscope
-            itemtype="https://schema.org/Person"
-          >
+          <li class="contributor-item">
             <picture>
               <source
                 srcset="
@@ -835,11 +871,11 @@
                 src="./images/Rodion.png"
                 alt="Rodion's picture"
                 loading="lazy"
-                itemprop="image"
+                class="contributor-image"
               />
             </picture>
-            <p class="contributor-name" itemprop="name">Rodion Salnik</p>
-            <p class="position" itemprop="jobTitle">Promotion & bussines</p>
+            <p class="contributor-name">Rodion Salnik</p>
+            <p class="position">Promotion & bussines</p>
           </li>
         </ul>
       </section>
@@ -852,16 +888,12 @@
         </p>
         <ul class="contacts-list">
           <li class="contacts-item">
-            <a
-              href="mailto:boilerplates@brocoders.com"
-              itemscope
-              itemprop="email"
-            >
+            <a href="mailto:boilerplates@brocoders.com">
               <svg width="20" height="14">
                 <use href="./images/sprite.svg#message"></use>
               </svg>
-              boilerplates@brocoders.com</a
-            >
+              boilerplates@brocoders.com
+            </a>
           </li>
           <li class="contacts-item">
             <a
@@ -875,12 +907,7 @@
             >
           </li>
           <li class="contacts-item">
-            <p
-              class="git-contacts"
-              itemprop="publisher"
-              itemscope
-              itemtype="http://schema.org/Organization"
-            >
+            <p class="git-contacts">
               <span>
                 <svg width="24" height="24">
                   <use href="./images/sprite.svg#github_white"></use>
@@ -889,13 +916,11 @@
               </span>
               <a
                 href="https://github.com/brocoders/extensive-react-boilerplate/discussions"
-                itemprop="url"
               >
                 Frontend
               </a>
               <a
                 href="https://github.com/brocoders/nestjs-boilerplate/discussions"
-                itemprop="url"
               >
                 Backend
               </a>
@@ -904,7 +929,7 @@
         </ul>
       </section>
     </main>
-    <footer itemscope itemtype="http://schema.org/WebPage">
+    <footer>
       <ul class="footer-list">
         <li class="footer-link">
           <a
@@ -918,13 +943,17 @@
           </a>
         </li>
         <li class="footer-link">
-          <a href="https://github.com/brocoders/nestjs-boilerplate/discussions">
+          <a
+            href="https://github.com/brocoders/nestjs-boilerplate/discussions"
+            target="_blank"
+          >
             Nest.js Boilerplate
           </a>
         </li>
         <li class="footer-link">
           <a
             href="https://github.com/brocoders/extensive-react-boilerplate/discussions"
+            target="_blank"
           >
             React Boilerplate
           </a>
@@ -946,7 +975,7 @@
           </a>
         </li>
         <li class="footer-link">
-          <a href="https://brocoders.com/">
+          <a href="https://brocoders.com/" target="_blank">
             <svg width="20" height="20" aria-label="">
               <use href="./images/sprite.svg#broLogo_black"></use>
             </svg>
@@ -954,15 +983,7 @@
           </a>
         </li>
       </ul>
-      <span
-        itemprop="copyrightHolder"
-        itemscope
-        itemtype="http://schema.org/Organization"
-      >
-        <meta itemprop="name" content="Brocoders" />
-      </span>
     </footer>
-
     <script src="./js/menu.js"></script>
     <script src="./js/stars.js" async></script>
   </body>

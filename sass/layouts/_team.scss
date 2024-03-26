@@ -66,7 +66,13 @@
 .contributor-name {
   @include subTitleFont($fs: 24px, $lh: 1, $ls: -0.4px, $fw: 800);
   margin-top: 32px;
+  overflow-x: visible;
 }
 .position {
   @include textFont($fs: 18px, $lh: 1.33, $ls: -0.4px);
+  overflow-x: visible;
+}
+.contributor-image {
+  width: 300px;
+  aspect-ratio: 1/1;
 }

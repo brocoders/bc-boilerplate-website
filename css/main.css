@@ -347,6 +347,9 @@ img {
     padding-bottom: 22px;
   }
 }
+.header-container .name {
+  overflow-x: visible;
+}
 
 .logo-header {
   display: flex;
@@ -571,6 +574,7 @@ img {
   .backend {
     padding-left: 18px;
     padding-right: 18px;
+    overflow-x: visible;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -652,6 +656,7 @@ img {
 .comparison-list {
   padding-left: 15px;
   padding-bottom: 32px;
+  overflow-x: visible;
 }
 
 .comparison-item {
@@ -974,6 +979,7 @@ img {
   font-weight: 700;
   color: #14181a;
   padding: 24px 24px 0;
+  overflow-x: visible;
 }
 @media screen and (min-width: 1200px) {
   .dev-number {
@@ -1196,6 +1202,7 @@ img {
   font-weight: 800;
   color: #14181a;
   margin-top: 32px;
+  overflow-x: visible;
 }
 
 .position {
@@ -1205,6 +1212,12 @@ img {
   letter-spacing: -0.4px;
   font-weight: 400;
   color: #2e384d;
+  overflow-x: visible;
+}
+
+.contributor-image {
+  width: 300px;
+  aspect-ratio: 1/1;
 }
 
 #contacts {
