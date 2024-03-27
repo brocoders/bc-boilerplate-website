@@ -68,7 +68,7 @@
   border-top: 1px solid $bgdColor;
   padding-left: $mobilePadding;
   @media screen and (min-width: $desktop) {
-    padding-left: 167px;
+    padding-left: $sidePadding;
     padding-right: 53px;
 
     display: inline-flex;
@@ -79,12 +79,18 @@
       margin-top: auto;
     }
   }
+  @media screen and (min-width: $wide) {
+    padding-left: $wideSidePadding;
+  }
 }
 .backend {
   background-color: $bgdColor;
   @media screen and (min-width: $desktop) {
     padding-left: 40px;
-    padding-right: 167px;
+    padding-right: $sidePadding;
+  }
+  @media screen and (min-width: $wide) {
+    padding-right: $wideSidePadding;
   }
 }
 .comparison-title {

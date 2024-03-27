@@ -12,6 +12,11 @@
       right: $sidePadding;
     }
   }
+  @media screen and (min-width: $wide) {
+    .btn-black {
+      right: $wideSidePadding;
+    }
+  }
 }
 .articles-title {
   @include titleFont($fs: 36px, $lh: 1.35, $ls: -2px);

@@ -13,6 +13,11 @@
       right: $sidePadding;
     }
   }
+  @media screen and (min-width: $wide) {
+    .hero-btn {
+      right: $wideSidePadding;
+    }
+  }
 }
 .demo-basic {
   @include font($fs: 22px, $lh: 1.46, $ls: -0.4px);
@@ -29,12 +34,19 @@
     font-size: 48px;
   }
 }
+.demo-img {
+  aspect-ratio: 354 / 203;
+}
+
 .demo-item {
   padding-top: 24px;
   padding-bottom: 24px;
   @media (max-width: #{$desktop - 1}) {
     padding-left: $mobilePadding;
     padding-right: $mobilePadding;
+    .demo-img {
+      width: 100%;
+    }
   }
   @media screen and (min-width: $desktop) {
     display: flex;
@@ -53,6 +65,14 @@
       .demo-img {
         object-position: 100%;
       }
+    }
+  }
+  @media screen and (min-width: $wide) {
+    &:nth-child(odd) {
+      padding-left: $wideSidePadding;
+    }
+    &:nth-child(even) {
+      padding-right: $wideSidePadding;
     }
   }
 }
