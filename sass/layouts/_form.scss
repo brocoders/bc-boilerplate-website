@@ -93,6 +93,7 @@
   @media screen and (min-width: $desktop) {
     flex-basis: 50%;
     margin-bottom: 0;
+    overflow-x: visible;
   }
 }
 .form-container {

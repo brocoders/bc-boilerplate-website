@@ -64,6 +64,7 @@
   align-items: center;
   border-color: $bc;
   background-color: $bgc;
+  overflow-x: visible;
 
   transition: color 250ms $timingFunction,
     background-color 250ms $timingFunction, border-color 250ms $timingFunction;

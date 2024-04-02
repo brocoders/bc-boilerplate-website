@@ -1,7 +1,7 @@
 .hero {
   background-color: $blackBackground;
 
-  .container {
+  .hero-container {
     padding-top: 55px;
     padding-bottom: 55px;
     overflow-x: visible;
@@ -17,7 +17,7 @@
     background-size: cover;
     background-position: top right 50%;
 
-    .container {
+    .hero-container {
       width: 60%;
     }
     .hero-btn {
@@ -53,9 +53,24 @@
     );
   }
   @media screen and (min-width: $wide) {
-    .container {
+    .hero-container {
       width: 50%;
     }
+  }
+}
+.hero-container {
+  padding-left: $mobilePadding;
+  padding-right: $mobilePadding;
+
+  @media screen and (min-width: $desktop) {
+    padding-right: $sidePadding;
+    padding-left: $sidePadding;
+  }
+  @media screen and (min-width: $wide) {
+    padding-left: $wideSidePadding;
+  }
+  @media screen and (min-width: $xl) {
+    padding-left: $xlSidePadding;
   }
 }
 .hero-title {

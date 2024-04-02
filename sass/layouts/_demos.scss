@@ -18,6 +18,11 @@
       right: $wideSidePadding;
     }
   }
+  @media screen and (min-width: $xl) {
+    .hero-btn {
+      right: $xlSidePadding;
+    }
+  }
 }
 .demo-basic {
   @include font($fs: 22px, $lh: 1.46, $ls: -0.4px);
@@ -73,6 +78,14 @@
     }
     &:nth-child(even) {
       padding-right: $wideSidePadding;
+    }
+  }
+  @media screen and (min-width: $xl) {
+    &:nth-child(odd) {
+      padding-left: $xlSidePadding;
+    }
+    &:nth-child(even) {
+      padding-right: $xlSidePadding;
     }
   }
 }

@@ -82,6 +82,9 @@
   @media screen and (min-width: $wide) {
     padding-left: $wideSidePadding;
   }
+  @media screen and (min-width: $xl) {
+    padding-left: $xlSidePadding;
+  }
 }
 .backend {
   background-color: $bgdColor;
@@ -91,6 +94,9 @@
   }
   @media screen and (min-width: $wide) {
     padding-right: $wideSidePadding;
+  }
+  @media screen and (min-width: $xl) {
+    padding-right: $xlSidePadding;
   }
 }
 .comparison-title {

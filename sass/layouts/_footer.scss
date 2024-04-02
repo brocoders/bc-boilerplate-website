@@ -13,6 +13,10 @@ footer {
     padding-left: $wideSidePadding;
     padding-right: $wideSidePadding;
   }
+  @media screen and (min-width: $xl) {
+    padding-left: $xlSidePadding;
+    padding-right: $xlSidePadding;
+  }
 }
 .footer-list {
   @include flex($ali: flex-start);

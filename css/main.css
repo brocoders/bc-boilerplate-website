@@ -44,6 +44,12 @@
     padding-right: 355px;
   }
 }
+@media screen and (min-width: 2600px) {
+  #articles, #team, .demo-header, .form-section, .feature-list, .container {
+    padding-left: 600px;
+    padding-right: 600px;
+  }
+}
 
 html {
   box-sizing: border-box;
@@ -175,6 +181,7 @@ img {
   align-items: center;
   border-color: #d91965;
   background-color: #d91965;
+  overflow-x: visible;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
   font-size: 16px;
@@ -211,6 +218,7 @@ img {
   align-items: center;
   border-color: #000;
   background-color: #000;
+  overflow-x: visible;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
   font-size: 16px;
@@ -245,6 +253,7 @@ img {
   align-items: center;
   border-color: #d91965;
   background-color: #fff;
+  overflow-x: visible;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
   font-size: 16px;
@@ -262,18 +271,6 @@ img {
 .btn-white:is(:hover, :focus) {
   background-color: #d91965;
   color: #fff;
-}
-
-.qualities--visually-hidden,
-.works--visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .menu {
@@ -408,13 +405,13 @@ img {
 .hero {
   background-color: #10133c;
 }
-.hero .container {
+.hero .hero-container {
   padding-top: 55px;
   padding-bottom: 55px;
   overflow-x: visible;
 }
 @media screen and (min-width: 768px) {
-  .hero .container {
+  .hero .hero-container {
     padding-top: 63px;
     padding-bottom: 63px;
   }
@@ -426,7 +423,7 @@ img {
     background-size: cover;
     background-position: top right 50%;
   }
-  .hero .container {
+  .hero .hero-container {
     width: 60%;
   }
   .hero .hero-btn {
@@ -450,8 +447,29 @@ img {
   }
 }
 @media screen and (min-width: 1900px) {
-  .hero .container {
+  .hero .hero-container {
     width: 50%;
+  }
+}
+
+.hero-container {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+@media screen and (min-width: 1200px) {
+  .hero-container {
+    padding-right: 170px;
+    padding-left: 170px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .hero-container {
+    padding-left: 355px;
+  }
+}
+@media screen and (min-width: 2600px) {
+  .hero-container {
+    padding-left: 600px;
   }
 }
 
@@ -614,6 +632,11 @@ img {
     padding-left: 355px;
   }
 }
+@media screen and (min-width: 2600px) {
+  .frontend {
+    padding-left: 600px;
+  }
+}
 
 .backend {
   background-color: #fafafa;
@@ -627,6 +650,11 @@ img {
 @media screen and (min-width: 1900px) {
   .backend {
     padding-right: 355px;
+  }
+}
+@media screen and (min-width: 2600px) {
+  .backend {
+    padding-right: 600px;
   }
 }
 
@@ -785,6 +813,7 @@ img {
   .form-title {
     flex-basis: 50%;
     margin-bottom: 0;
+    overflow-x: visible;
   }
 }
 
@@ -814,6 +843,11 @@ img {
 @media screen and (min-width: 1900px) {
   .demo-header .hero-btn {
     right: 355px;
+  }
+}
+@media screen and (min-width: 2600px) {
+  .demo-header .hero-btn {
+    right: 600px;
   }
 }
 
@@ -891,6 +925,14 @@ img {
   }
   .demo-item:nth-child(even) {
     padding-right: 355px;
+  }
+}
+@media screen and (min-width: 2600px) {
+  .demo-item:nth-child(odd) {
+    padding-left: 600px;
+  }
+  .demo-item:nth-child(even) {
+    padding-right: 600px;
   }
 }
 
@@ -1293,6 +1335,7 @@ img {
     font-size: 72px;
     line-height: 1;
     letter-spacing: -3.6px;
+    overflow-x: visible;
   }
 }
 
@@ -1390,6 +1433,11 @@ img {
     right: 355px;
   }
 }
+@media screen and (min-width: 2600px) {
+  #articles .btn-black {
+    right: 600px;
+  }
+}
 
 .articles-title {
   font-family: "DIN Pro", "DIN Pro fallback", sans-serif;
@@ -1476,6 +1524,12 @@ footer {
   footer {
     padding-left: 355px;
     padding-right: 355px;
+  }
+}
+@media screen and (min-width: 2600px) {
+  footer {
+    padding-left: 600px;
+    padding-right: 600px;
   }
 }
 

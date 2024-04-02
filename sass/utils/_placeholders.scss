@@ -10,4 +10,8 @@
     padding-left: $wideSidePadding;
     padding-right: $wideSidePadding;
   }
+  @media screen and (min-width: $xl) {
+    padding-left: $xlSidePadding;
+    padding-right: $xlSidePadding;
+  }
 }
