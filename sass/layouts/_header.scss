@@ -36,7 +36,7 @@
 }
 .site-nav__link {
   @include font($fs: 16px, $lh: 1.63);
-  &:is(:hover, :focus, :active) {
+  &:hover {
     text-decoration: underline;
   }
 }

@@ -1,7 +1,7 @@
 .hero-btn {
   @include button($bc: $mainEmphasisColor);
   width: 191px;
-  &:is(:hover, :focus) {
+  &:hover {
     background-color: #fff;
     color: $mainEmphasisColor;
     border-color: $mainEmphasisColor;
@@ -9,14 +9,14 @@
 }
 .btn-black {
   @include button($bc: #000, $bgc: #000, $cl: #fff);
-  &:is(:hover, :focus) {
+  &:hover {
     background-color: $mainEmphasisColor;
     border-color: $mainEmphasisColor;
   }
 }
 .btn-white {
   @include button($bc: $mainEmphasisColor, $bgc: #fff, $cl: $mainEmphasisColor);
-  &:is(:hover, :focus) {
+  &:hover {
     background-color: $mainEmphasisColor;
     color: #fff;
   }

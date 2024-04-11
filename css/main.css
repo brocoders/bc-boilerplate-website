@@ -197,7 +197,7 @@ img {
     width: 195px;
   }
 }
-.hero-btn:is(:hover, :focus) {
+.hero-btn:hover {
   background-color: #fff;
   color: #d91965;
   border-color: #d91965;
@@ -233,7 +233,7 @@ img {
     width: 195px;
   }
 }
-.btn-black:is(:hover, :focus) {
+.btn-black:hover {
   background-color: #d91965;
   border-color: #d91965;
 }
@@ -268,7 +268,7 @@ img {
     width: 195px;
   }
 }
-.btn-white:is(:hover, :focus) {
+.btn-white:hover {
   background-color: #d91965;
   color: #fff;
 }
@@ -398,7 +398,7 @@ img {
   font-weight: 400;
   color: #2e384d;
 }
-.site-nav__link:is(:hover, :focus, :active) {
+.site-nav__link:hover {
   text-decoration: underline;
 }
 
@@ -820,7 +820,7 @@ img {
 .form-container {
   position: relative;
   top: 40px;
-  height: 150px;
+  height: 200px;
   width: 350px;
 }
 
