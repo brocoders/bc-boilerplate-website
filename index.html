@@ -438,6 +438,13 @@
               region: "na1",
               portalId: "7227761",
               formId: "da33e91f-fa42-4232-b67e-540c4f76d4d9",
+              onBeforeFormSubmit: () => {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                  event: "formSubmission",
+                  formType: "Request the estimation",
+                });
+              },
             });
           </script>
         </div>
